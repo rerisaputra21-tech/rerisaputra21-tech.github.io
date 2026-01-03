@@ -3,84 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZE UNIVERSE – Digital Store</title>ZE UNIVERSE – Digital Store</title>
+<title>ZEA UNIVERSE – Premium Digital Store</title>
 
 <style>
 body{
   margin:0;
-  font-family:Arial,Helvetica,sans-serif;
+  font-family: 'Segoe UI',sans-serif;
   background:#0b1220;
   color:#fff;
 }
+
 header{
-  padding:20px;
+  padding:25px 15px;
+  background:linear-gradient(90deg,#0ea5e9,#22c55e);
   text-align:center;
-  background:linear-gradient(90deg,#22c55e,#16a34a);
-  color:#04110a;
 }
+
 header h1{
   margin:0;
-  font-size:22px;
+  font-size:26px;
+  letter-spacing:2px;
 }
+
 header p{
-  margin:4px 0 0;
-  font-size:14px;
+  margin-top:5px;
+  opacity:.9;
 }
+
 .container{
-  padding:16px;
+  padding:25px 15px;
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:16px;
+  gap:18px;
 }
-@media(min-width:768px){
-  .container{
-    grid-template-columns:repeat(4,1fr);
-  }
-}
+
 .product{
   background:#111827;
   border-radius:18px;
-  padding:16px;
-  text-align:center;
-  box-shadow:0 0 12px rgba(0,0,0,.5);
+  padding:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,.5);
+  position:relative;
 }
-.logo{
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  object-fit:contain;
-  background:#fff;
-  padding:8px;
+
+.product h3{
+  margin:10px 0;
+  font-size:18px;
 }
-.product h2{
-  font-size:15px;
-  margin:10px 0 4px;
-}
+
 .price{
   color:#22c55e;
+  font-size:20px;
   font-weight:bold;
-  margin-bottom:10px;
 }
+
+.badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:#22c55e;
+  color:#000;
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+}
+
 .btn{
   display:block;
-  padding:10px;
-  border-radius:10px;
+  margin-top:15px;
+  padding:12px;
   background:#22c55e;
-  color:#04110a;
-  text-decoration:none;
-  font-weight:bold;
-}
-.wa-float{
-  position:fixed;
-  right:16px;
-  bottom:16px;
-  background:#25d366;
   color:#000;
-  padding:14px 18px;
-  border-radius:50px;
-  font-weight:bold;
+  border-radius:12px;
   text-decoration:none;
-  box-shadow:0 0 10px rgba(0,0,0,.5);
+  font-weight:bold;
+  text-align:center;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:13px;
+  opacity:.6;
 }
 </style>
 </head>
@@ -88,66 +92,43 @@ header p{
 <body>
 
 <header>
-  <h1>ZE UNIVERSE</h1>
-  <p>Digital Subscription Store</p>
+  <h1>ZEA UNIVERSE</h1>
+  <p>Premium Digital Store</p>
 </header>
 
 <div class="container">
 
   <div class="product">
-    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png">
-    <h2>Netflix Premium</h2>
-    <div class="price">Mulai Rp33.000</div>
-    <a class="btn" href="https://wa.me/6281293403706?text=Halo%20ZE%20UNIVERSE%0ASaya%20mau%20order%20Netflix%20Premium">Order</a>
+    <div class="badge">BEST</div>
+    <h3>YouTube Premium</h3>
+    <div class="price">Rp35.000 / bulan</div>
+    <a class="btn" href="https://wa.me/6281293403706">Order</a>
   </div>
 
   <div class="product">
-    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
-    <h2>YouTube Premium</h2>
-    <div class="price">Mulai Rp13.000</div>
-    <a class="btn" href="https://wa.me/6281293403706?text=Halo%20ZE%20UNIVERSE%0ASaya%20mau%20order%20YouTube%20Premium">Order</a>
+    <h3>Netflix Premium</h3>
+    <div class="price">Rp30.000 / bulan</div>
+    <a class="btn" href="https://wa.me/6281293403706">Order</a>
   </div>
 
   <div class="product">
-    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Canva_Logo.png">
-    <h2>Canva Premium</h2>
-    <div class="price">Mulai Rp13.000</div>
-    <a class="btn" href="https://wa.me/6281293403706?text=Halo%20ZE%20UNIVERSE%0ASaya%20mau%20order%20Canva%20Premium">Order</a>
+    <h3>Canva Premium</h3>
+    <div class="price">Rp20.000 / bulan</div>
+    <a class="btn" href="https://wa.me/6281293403706">Order</a>
   </div>
 
   <div class="product">
-    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/4/4f/OpenAI_Logo.svg">
-    <h2>ChatGPT Plus</h2>
-    <div class="price">Mulai Rp25.000</div>
-    <a class="btn" href="https://wa.me/6281293403706?text=Halo%20ZE%20UNIVERSE%0ASaya%20mau%20order%20ChatGPT%20Plus">Order</a>
-  </div>
-
-  <div class="product">
-    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Apple_Music_Icon.svg">
-    <h2>Apple Music</h2>
-    <div class="price">Mulai Rp23.000</div>
-    <a class="btn" href="https://wa.me/6281293403706?text=Halo%20ZE%20UNIVERSE%0ASaya%20mau%20order%20Apple%20Music">Order</a>
-  </div>
-
-  <div class="product">
-    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Zoom_Communications_Logo.svg">
-    <h2>Zoom Pro</h2>
-    <div class="price">Mulai Rp40.000</div>
-    <a class="btn" href="https://wa.me/6281293403706?text=Halo%20ZE%20UNIVERSE%0ASaya%20mau%20order%20Zoom%20Pro">Order</a>
-  </div>
-
-  <div class="product">
-    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_One_logo.svg">
-    <h2>Google One</h2>
-    <div class="price">Mulai Rp18.000</div>
-    <a class="btn" href="https://wa.me/6281293403706?text=Halo%20ZE%20UNIVERSE%0ASaya%20mau%20order%20Google%20One">Order</a>
+    <div class="badge">HOT</div>
+    <h3>ChatGPT Pro</h3>
+    <div class="price">Rp50.000 / bulan</div>
+    <a class="btn" href="https://wa.me/6281293403706">Order</a>
   </div>
 
 </div>
 
-<a class="wa-float" href="https://wa.me/6281293403706">
-Chat WhatsApp
-</a>
+<footer>
+© 2026 ZEA UNIVERSE
+</footer>
 
 </body>
 </html>
