@@ -1,182 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZEA UNIVERSE – Digital Store</title>
+
 <style>
-/* ===== FAQ & CONTACT ZEA UNIVERSE ===== */
-.faq-section{
-  padding:60px 20px;
-  max-width:1100px;
-  margin:auto;
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto}
+html,body{background:#020617;color:#fff}
+
+/* ===== HEADER ===== */
+header{
+  background:linear-gradient(90deg,#06b6d4,#22c55e);
+  padding:14px 20px;
+  text-align:center;
+  font-weight:800;
+  letter-spacing:1px;
 }
 
-.faq-item{
-  background:#0b1220;
-  border-radius:14px;
-  padding:18px 20px;
-  margin-bottom:14px;
-  cursor:pointer;
-  border:1px solid rgba(255,255,255,.06);
+/* ===== HERO ===== */
+.hero{
+  padding:70px 20px;
+  background:radial-gradient(circle at top,#0f172a,#020617);
 }
-
-.faq-q{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-weight:600;
+.hero-content{max-width:1000px;margin:auto}
+.badge{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:30px;
+  background:rgba(34,197,94,.15);
+  color:#22c55e;
+  font-size:13px;
+  margin-bottom:18px;
 }
-
-.faq-a{
-  max-height:0;
-  overflow:hidden;
-  opacity:.8;
-  font-size:14px;
-  transition:.3s;
-  margin-top:0;
+.hero h1{
+  font-size:36px;
+  line-height:1.2;
+  margin-bottom:15px;
 }
-
-.faq-item.active .faq-a{
-  max-height:200px;
-  margin-top:12px;
-}
-
-.help-box{
-  background:linear-gradient(160deg,#0f172a,#020617);
-  border-radius:18px;
-  padding:28px;
-  margin-top:40px;
-  border:1px solid rgba(255,255,255,.08);
-}
-
-.help-box h3{
-  margin:0 0 10px;
-}
-
-.help-box p{
-  opacity:.8;
-  font-size:14px;
-}
-
-.btn-wa-big{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  background:#16a34a;
-  color:#fff;
+.hero p{opacity:.85;max-width:720px}
+.hero-btn{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0}
+.btn-main,.btn-wa{
   padding:14px 22px;
-  border-radius:12px;
+  border-radius:10px;
   text-decoration:none;
-  font-weight:bold;
-  margin-top:16px;
+  font-weight:700;
+}
+.btn-main{
+  background:linear-gradient(90deg,#06b6d4,#22c55e);
+  color:#000;
+}
+.btn-wa{
+  border:1px solid #22c55e;
+  color:#22c55e;
+}
+.hero-info{
+  display:flex;
+  gap:20px;
+  list-style:none;
+  opacity:.85;
+  margin-top:10px;
+  flex-wrap:wrap;
 }
 
-.footer{
-  margin-top:80px;
-  padding:40px 20px;
-  background:#020617;
-  border-top:1px solid rgba(255,255,255,.08);
+/* ===== PRODUK ===== */
+.products{
+  padding:60px 20px;
 }
-
-.footer-inner{
+.products h2{text-align:center;margin-bottom:30px}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
   max-width:1100px;
   margin:auto;
-  display:grid;
-  gap:25px;
+}
+.card{
+  background:#020617;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  padding:20px;
+  text-align:center;
+}
+.card h3{margin-bottom:6px}
+.price{color:#22c55e;font-weight:700;margin-bottom:12px}
+.card button{
+  background:#22c55e;
+  border:none;
+  padding:10px 16px;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
 }
 
-.footer small{
-  opacity:.6;
+/* ===== FAQ ===== */
+.faq{
+  padding:60px 20px;
+  background:#020617;
+}
+.faq h2{text-align:center;margin-bottom:30px}
+.faq-item{
+  max-width:900px;
+  margin:12px auto;
+  background:#0f172a;
+  border-radius:12px;
+  padding:18px;
+}
+.faq-item summary{
+  cursor:pointer;
+  font-weight:700;
+}
+.faq-item p{opacity:.85;margin-top:10px}
+
+/* ===== CTA ===== */
+.cta{
+  max-width:900px;
+  margin:40px auto;
+  background:#0f172a;
+  padding:30px;
+  border-radius:16px;
+  text-align:center;
+}
+.cta a{
+  display:inline-block;
+  margin-top:20px;
+  background:#16a34a;
+  padding:14px 24px;
+  border-radius:10px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
 }
 
-.whatsapp-info{
-  display:flex;
-  gap:12px;
-  align-items:flex-start;
-  opacity:.85;
+/* ===== FOOTER ===== */
+footer{
+  padding:50px 20px;
+  background:#020617;
 }
+.footer-wrap{
+  max-width:1000px;
+  margin:auto;
+}
+footer h3{margin-bottom:10px}
+footer p{opacity:.75;margin-bottom:8px}
+.small{opacity:.4;font-size:13px;margin-top:20px;text-align:center}
 </style>
+</head>
 
-<section class="faq-section">
+<body>
 
-  <div class="faq-item">
-    <div class="faq-q">
-      Apakah layanan ini mengikuti kebijakan platform resmi?
-      <span>⌄</span>
+<header>ZEA UNIVERSE</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <span class="badge">Solusi langganan digital premium</span>
+    <h1>LAYANAN DIGITAL PREMIUM<br>DALAM SATU PORTAL</h1>
+    <p>Netflix, YouTube, Spotify, Canva, ChatGPT, Google One, Apple Music — cepat, aman & terpercaya.</p>
+
+    <div class="hero-btn">
+      <a href="#produk" class="btn-main">Lihat Produk</a>
+      <a href="https://wa.me/6281293403706" class="btn-wa">Hubungi Admin</a>
     </div>
-    <div class="faq-a">
-      Ya. Semua layanan digital di ZEA UNIVERSE disediakan sesuai kebijakan
-      masing-masing platform. Keamanan akun dan kenyamanan pelanggan
-      adalah prioritas utama kami.
-    </div>
+
+    <ul class="hero-info">
+      <li>⚡ Proses 1–10 menit</li>
+      <li>🛡 Garansi layanan</li>
+      <li>⭐ Pelanggan puas</li>
+    </ul>
   </div>
-
-  <div class="faq-item">
-    <div class="faq-q">
-      Berapa lama proses aktivasi layanan?
-      <span>⌄</span>
-    </div>
-    <div class="faq-a">
-      Proses aktivasi umumnya membutuhkan waktu 1–10 menit setelah pembayaran
-      dikonfirmasi oleh admin.
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q">
-      Bagaimana jika terjadi kendala?
-      <span>⌄</span>
-    </div>
-    <div class="faq-a">
-      Admin ZEA UNIVERSE siap membantu selama jam operasional.
-      Garansi layanan tersedia sesuai ketentuan produk.
-    </div>
-  </div>
-
-  <div class="help-box">
-    <h3>Masih ada hal yang ingin diklarifikasi?</h3>
-    <p>
-      Jika pertanyaan Anda belum terjawab, silakan hubungi admin secara langsung.
-      Jelaskan kebutuhan Anda dan admin akan membantu memilih paket
-      yang paling sesuai.
-    </p>
-
-    <a class="btn-wa-big"
-       href="https://wa.me/6281293403706"
-       target="_blank">
-       💬 Tanya Admin Sekarang
-    </a>
-  </div>
-
 </section>
 
-<footer class="footer">
-  <div class="footer-inner">
+<section id="produk" class="products">
+  <h2>Produk Populer</h2>
+  <div class="grid">
+    <div class="card"><h3>YouTube Premium</h3><div class="price">35K / bulan</div><button>Tambah</button></div>
+    <div class="card"><h3>Netflix</h3><div class="price">30K / bulan</div><button>Tambah</button></div>
+    <div class="card"><h3>Canva Pro</h3><div class="price">20K / bulan</div><button>Tambah</button></div>
+    <div class="card"><h3>ChatGPT Pro</h3><div class="price">50K / bulan</div><button>Tambah</button></div>
+    <div class="card"><h3>Google One</h3><div class="price">Mulai 25K</div><button>Tambah</button></div>
+    <div class="card"><h3>Spotify</h3><div class="price">Mulai 25K</div><button>Tambah</button></div>
+    <div class="card"><h3>Apple Music</h3><div class="price">Mulai 30K</div><button>Tambah</button></div>
+  </div>
+</section>
 
-    <div>
-      <strong>ZEA UNIVERSE</strong><br>
-      <small>Premium Digital Subscription Portal</small>
-    </div>
+<section class="faq">
+  <h2>Pertanyaan Umum</h2>
 
-    <div>
-      <strong>Jam Operasional</strong><br>
-      08.00 – 23.00 WITA<br>
-      <small>Di luar jam tersebut, respon bisa sedikit lebih lambat</small>
-    </div>
+  <details class="faq-item">
+    <summary>Apakah layanan ini mengikuti kebijakan resmi?</summary>
+    <p>Ya. Semua layanan dijalankan sesuai ketentuan platform terkait.</p>
+  </details>
 
-    <div class="whatsapp-info">
-      💬
-      <div>
-        <strong>WhatsApp Admin</strong><br>
-        Konsultasi produk, cek harga, dan konfirmasi pembayaran
-        langsung dengan admin ZEA UNIVERSE.
-      </div>
-    </div>
+  <details class="faq-item">
+    <summary>Berapa lama proses aktivasi?</summary>
+    <p>Rata-rata 1–10 menit setelah pembayaran.</p>
+  </details>
 
-    <small>© 2026 ZEA UNIVERSE — All rights reserved.</small>
+  <details class="faq-item">
+    <summary>Bagaimana jika terjadi kendala?</summary>
+    <p>Admin siap membantu selama jam operasional.</p>
+  </details>
 
+  <div class="cta">
+    <h3>Masih ada yang ingin diklarifikasi?</h3>
+    <p>Hubungi admin langsung untuk rekomendasi terbaik.</p>
+    <a href="https://wa.me/6281293403706">Tanya Admin Sekarang</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-wrap">
+    <h3>Hubungi & Ikuti ZEA UNIVERSE</h3>
+    <p>Jam operasional: <b>08.00 – 23.00 WITA</b></p>
+    <p>WhatsApp Admin: 0812-9340-3706</p>
+    <p class="small">© 2026 ZEA UNIVERSE — Digital Store</p>
   </div>
 </footer>
 
-<script>
-document.querySelectorAll(".faq-item").forEach(item=>{
-  item.addEventListener("click",()=>{
-    item.classList.toggle("active");
-  });
-});
-</script>
+</body>
+</html>
