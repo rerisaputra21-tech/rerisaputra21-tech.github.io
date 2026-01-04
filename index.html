@@ -1,237 +1,182 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZEA UNIVERSE - Premium Digital Store</title>
+<style>
+/* ===== FAQ & CONTACT ZEA UNIVERSE ===== */
+.faq-section{
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
+}
 
-  <style>
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:'Segoe UI',sans-serif;
-      background:#020617;
-      color:#fff;
-    }
+.faq-item{
+  background:#0b1220;
+  border-radius:14px;
+  padding:18px 20px;
+  margin-bottom:14px;
+  cursor:pointer;
+  border:1px solid rgba(255,255,255,.06);
+}
 
-    /* HEADER */
-    header{
-      padding:18px 20px;
-      background:linear-gradient(90deg,#06b6d4,#22c55e);
-      text-align:center;
-      font-weight:800;
-      letter-spacing:1px;
-    }
+.faq-q{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-weight:600;
+}
 
-    /* HERO */
-    .hero{
-      padding:60px 20px 40px;
-      background:radial-gradient(circle at top,#0f172a,#020617);
-    }
-    .hero-content{
-      max-width:1000px;
-      margin:auto;
-    }
-    .badge{
-      display:inline-block;
-      padding:10px 16px;
-      border-radius:30px;
-      background:rgba(34,197,94,.15);
-      color:#22c55e;
-      font-size:13px;
-      margin-bottom:18px;
-    }
-    .hero h2{
-      font-size:34px;
-      line-height:1.2;
-      margin:10px 0 15px;
-    }
-    .hero p{
-      opacity:.85;
-      max-width:800px;
-    }
-    .hero-btn{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin:25px 0;
-    }
-    .btn-main{
-      background:linear-gradient(90deg,#06b6d4,#22c55e);
-      color:#000;
-      padding:14px 22px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:bold;
-    }
-    .btn-wa{
-      border:1px solid #22c55e;
-      color:#22c55e;
-      padding:14px 22px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:bold;
-    }
-    .hero-info{
-      display:flex;
-      gap:20px;
-      flex-wrap:wrap;
-      list-style:none;
-      padding:0;
-      margin-top:15px;
-      opacity:.85;
-    }
+.faq-a{
+  max-height:0;
+  overflow:hidden;
+  opacity:.8;
+  font-size:14px;
+  transition:.3s;
+  margin-top:0;
+}
 
-    /* PRODUK */
-    .container{
-      max-width:1200px;
-      margin:auto;
-      padding:30px 20px 80px;
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
-      gap:18px;
-    }
-    .card{
-      background:#0b1220;
-      border-radius:16px;
-      padding:18px;
-      text-align:center;
-      box-shadow:0 0 15px rgba(0,0,0,.4);
-    }
-    .card img{
-      width:48px;
-      height:48px;
-      margin-bottom:10px;
-      object-fit:contain;
-    }
-    .card h3{
-      margin:5px 0;
-      font-size:16px;
-    }
-    .price{
-      color:#22c55e;
-      font-weight:bold;
-      margin:6px 0 12px;
-    }
-    .btn{
-      display:block;
-      padding:10px;
-      border-radius:8px;
-      background:#22c55e;
-      color:#000;
-      text-decoration:none;
-      font-weight:bold;
-      margin-bottom:8px;
-    }
-    .btn.outline{
-      background:transparent;
-      border:1px solid #22c55e;
-      color:#22c55e;
-    }
+.faq-item.active .faq-a{
+  max-height:200px;
+  margin-top:12px;
+}
 
-    /* FLOAT BUTTON */
-    .float-wa{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#22c55e;
-      color:#000;
-      padding:14px 18px;
-      border-radius:50px;
-      text-decoration:none;
-      font-weight:bold;
-      box-shadow:0 0 15px rgba(0,0,0,.5);
-    }
-  </style>
-</head>
+.help-box{
+  background:linear-gradient(160deg,#0f172a,#020617);
+  border-radius:18px;
+  padding:28px;
+  margin-top:40px;
+  border:1px solid rgba(255,255,255,.08);
+}
 
-<body>
+.help-box h3{
+  margin:0 0 10px;
+}
 
-<header>ZEA UNIVERSE</header>
+.help-box p{
+  opacity:.8;
+  font-size:14px;
+}
 
-<section class="hero">
-  <div class="hero-content">
-    <span class="badge">Solusi langganan digital premium cepat & terpercaya</span>
-    <h2>LAYANAN DIGITAL PREMIUM<br>DALAM SATU PORTAL</h2>
+.btn-wa-big{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:#16a34a;
+  color:#fff;
+  padding:14px 22px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:16px;
+}
+
+.footer{
+  margin-top:80px;
+  padding:40px 20px;
+  background:#020617;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer-inner{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  gap:25px;
+}
+
+.footer small{
+  opacity:.6;
+}
+
+.whatsapp-info{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  opacity:.85;
+}
+</style>
+
+<section class="faq-section">
+
+  <div class="faq-item">
+    <div class="faq-q">
+      Apakah layanan ini mengikuti kebijakan platform resmi?
+      <span>⌄</span>
+    </div>
+    <div class="faq-a">
+      Ya. Semua layanan digital di ZEA UNIVERSE disediakan sesuai kebijakan
+      masing-masing platform. Keamanan akun dan kenyamanan pelanggan
+      adalah prioritas utama kami.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      Berapa lama proses aktivasi layanan?
+      <span>⌄</span>
+    </div>
+    <div class="faq-a">
+      Proses aktivasi umumnya membutuhkan waktu 1–10 menit setelah pembayaran
+      dikonfirmasi oleh admin.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      Bagaimana jika terjadi kendala?
+      <span>⌄</span>
+    </div>
+    <div class="faq-a">
+      Admin ZEA UNIVERSE siap membantu selama jam operasional.
+      Garansi layanan tersedia sesuai ketentuan produk.
+    </div>
+  </div>
+
+  <div class="help-box">
+    <h3>Masih ada hal yang ingin diklarifikasi?</h3>
     <p>
-      Kelola YouTube, Netflix, Spotify, Canva, ChatGPT, Google One,
-      Apple Music dan layanan digital lainnya dengan aman & harga terjangkau.
+      Jika pertanyaan Anda belum terjawab, silakan hubungi admin secara langsung.
+      Jelaskan kebutuhan Anda dan admin akan membantu memilih paket
+      yang paling sesuai.
     </p>
 
-    <div class="hero-btn">
-      <a href="#produk" class="btn-main">Lihat Daftar Produk</a>
-      <a href="https://wa.me/6281293403706" class="btn-wa">Hubungi Admin</a>
+    <a class="btn-wa-big"
+       href="https://wa.me/6281293403706"
+       target="_blank">
+       💬 Tanya Admin Sekarang
+    </a>
+  </div>
+
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+
+    <div>
+      <strong>ZEA UNIVERSE</strong><br>
+      <small>Premium Digital Subscription Portal</small>
     </div>
 
-    <ul class="hero-info">
-      <li>⚡ Proses 1–10 menit</li>
-      <li>🛡️ Garansi sesuai ketentuan</li>
-      <li>⭐ Ribuan pelanggan puas</li>
-    </ul>
+    <div>
+      <strong>Jam Operasional</strong><br>
+      08.00 – 23.00 WITA<br>
+      <small>Di luar jam tersebut, respon bisa sedikit lebih lambat</small>
+    </div>
+
+    <div class="whatsapp-info">
+      💬
+      <div>
+        <strong>WhatsApp Admin</strong><br>
+        Konsultasi produk, cek harga, dan konfirmasi pembayaran
+        langsung dengan admin ZEA UNIVERSE.
+      </div>
+    </div>
+
+    <small>© 2026 ZEA UNIVERSE — All rights reserved.</small>
+
   </div>
-</section>
+</footer>
 
-<section id="produk" class="container">
-
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
-    <h3>YouTube Premium</h3>
-    <div class="price">Rp35.000 / bulan</div>
-    <a class="btn" href="#">Tambah Keranjang</a>
-    <a class="btn outline" href="#">Lihat Varian</a>
-  </div>
-
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
-    <h3>Netflix Premium</h3>
-    <div class="price">Rp30.000 / bulan</div>
-    <a class="btn" href="#">Tambah Keranjang</a>
-    <a class="btn outline" href="#">Lihat Varian</a>
-  </div>
-
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg">
-    <h3>Canva Premium</h3>
-    <div class="price">Rp20.000 / bulan</div>
-    <a class="btn" href="#">Tambah Keranjang</a>
-    <a class="btn outline" href="#">Lihat Varian</a>
-  </div>
-
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg">
-    <h3>ChatGPT Pro</h3>
-    <div class="price">Rp50.000 / bulan</div>
-    <a class="btn" href="#">Tambah Keranjang</a>
-    <a class="btn outline" href="#">Lihat Varian</a>
-  </div>
-
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_One_logo.svg">
-    <h3>Google One</h3>
-    <div class="price">Mulai Rp25.000</div>
-    <a class="btn" href="#">Tambah Keranjang</a>
-    <a class="btn outline" href="#">Lihat Varian</a>
-  </div>
-
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg">
-    <h3>Spotify Premium</h3>
-    <div class="price">Mulai Rp25.000</div>
-    <a class="btn" href="#">Tambah Keranjang</a>
-    <a class="btn outline" href="#">Lihat Varian</a>
-  </div>
-
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg">
-    <h3>Apple Music</h3>
-    <div class="price">Mulai Rp30.000</div>
-    <a class="btn" href="#">Tambah Keranjang</a>
-    <a class="btn outline" href="#">Lihat Varian</a>
-  </div>
-
-</section>
-
-<a class="float-wa" href="https://wa.me/6281293403706">WhatsApp</a>
-
-</body>
-</html>
+<script>
+document.querySelectorAll(".faq-item").forEach(item=>{
+  item.addEventListener("click",()=>{
+    item.classList.toggle("active");
+  });
+});
+</script>
