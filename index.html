@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZEA UNIVERSE – Digital Store</title>
+<title>ZEE UNIVERSE – Digital Store</title>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto}
@@ -12,10 +12,34 @@ html,body{background:#020617;color:#fff}
 /* ===== HEADER ===== */
 header{
   background:linear-gradient(90deg,#06b6d4,#22c55e);
-  padding:14px 20px;
-  text-align:center;
-  font-weight:800;
+  padding:12px 18px;
+}
+.nav{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  font-weight:900;
   letter-spacing:1px;
+  font-size:16px;
+}
+.cart{
+  position:relative;
+  font-size:22px;
+  cursor:pointer;
+}
+.cart span{
+  position:absolute;
+  top:-6px;
+  right:-10px;
+  background:#ef4444;
+  color:#fff;
+  font-size:12px;
+  padding:2px 6px;
+  border-radius:20px;
 }
 
 /* ===== HERO ===== */
@@ -149,13 +173,18 @@ footer p{opacity:.75;margin-bottom:8px}
 
 <body>
 
-<header>ZEA UNIVERSE</header>
+<header>
+  <div class="nav">
+    <div class="logo">ZEA UNIVERSE</div>
+    <div class="cart">🛒<span>0</span></div>
+  </div>
+</header>
 
 <section class="hero">
   <div class="hero-content">
     <span class="badge">Solusi langganan digital premium</span>
     <h1>LAYANAN DIGITAL PREMIUM<br>DALAM SATU PORTAL</h1>
-    <p>Netflix, YouTube, Spotify, Canva, ChatGPT, Google One, Apple Music — cepat, aman & terpercaya.</p>
+    <p>Netflix, YouTube, Spotify, Canva, ChatGPT, Google One, Apple Music — cepat & aman.</p>
 
     <div class="hero-btn">
       <a href="#produk" class="btn-main">Lihat Produk</a>
@@ -187,33 +216,33 @@ footer p{opacity:.75;margin-bottom:8px}
   <h2>Pertanyaan Umum</h2>
 
   <details class="faq-item">
-    <summary>Apakah layanan ini mengikuti kebijakan resmi?</summary>
-    <p>Ya. Semua layanan dijalankan sesuai ketentuan platform terkait.</p>
+    <summary>Apakah layanan ini resmi?</summary>
+    <p>Layanan dijalankan sesuai kebijakan platform.</p>
   </details>
 
   <details class="faq-item">
-    <summary>Berapa lama proses aktivasi?</summary>
-    <p>Rata-rata 1–10 menit setelah pembayaran.</p>
+    <summary>Berapa lama aktivasi?</summary>
+    <p>1–10 menit setelah pembayaran.</p>
   </details>
 
   <details class="faq-item">
-    <summary>Bagaimana jika terjadi kendala?</summary>
-    <p>Admin siap membantu selama jam operasional.</p>
+    <summary>Jika ada kendala?</summary>
+    <p>Admin siap membantu via WhatsApp.</p>
   </details>
 
   <div class="cta">
-    <h3>Masih ada yang ingin diklarifikasi?</h3>
-    <p>Hubungi admin langsung untuk rekomendasi terbaik.</p>
+    <h3>Masih ragu?</h3>
+    <p>Hubungi admin untuk konsultasi gratis.</p>
     <a href="https://wa.me/6281293403706">Tanya Admin Sekarang</a>
   </div>
 </section>
 
 <footer>
   <div class="footer-wrap">
-    <h3>Hubungi & Ikuti ZEA UNIVERSE</h3>
+    <h3>ZEA UNIVERSE</h3>
     <p>Jam operasional: <b>08.00 – 23.00 WITA</b></p>
-    <p>WhatsApp Admin: 0812-9340-3706</p>
-    <p class="small">© 2026 ZEA UNIVERSE — Digital Store</p>
+    <p>WhatsApp: 0812-9340-3706</p>
+    <p class="small">© 2026 ZEE UNIVERSE</p>
   </div>
 </footer>
 
