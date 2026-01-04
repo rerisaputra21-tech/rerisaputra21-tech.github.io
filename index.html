@@ -1,145 +1,148 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZEA UNIVERSE - Digital Premium Store</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZEA UNIVERSE - Premium Digital Store</title>
 
-<style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Segoe UI,sans-serif;
-  background:#020617;
-  color:#fff;
-}
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Segoe UI',sans-serif;
+      background:#020617;
+      color:#fff;
+    }
 
-/* HEADER */
-header{
-  padding:18px;
-  text-align:center;
-  background:linear-gradient(90deg,#06b6d4,#22c55e);
-  font-weight:800;
-  letter-spacing:1px;
-}
+    /* HEADER */
+    header{
+      padding:18px 20px;
+      background:linear-gradient(90deg,#06b6d4,#22c55e);
+      text-align:center;
+      font-weight:800;
+      letter-spacing:1px;
+    }
 
-/* HERO */
-.hero{
-  padding:60px 20px 40px;
-  background:radial-gradient(circle at top,#0f172a,#020617);
-}
-.hero-content{max-width:1000px;margin:auto}
-.badge{
-  display:inline-block;
-  padding:10px 16px;
-  border-radius:30px;
-  background:rgba(34,197,94,.15);
-  color:#22c55e;
-  font-size:13px;
-  margin-bottom:18px;
-}
-.hero h2{font-size:34px;line-height:1.2}
-.hero p{opacity:.85;max-width:800px}
-.hero-btn{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0}
-.btn-main{
-  background:linear-gradient(90deg,#06b6d4,#22c55e);
-  color:#000;
-  padding:14px 22px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
-}
-.btn-wa{
-  border:1px solid #22c55e;
-  color:#22c55e;
-  padding:14px 22px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
-}
-.hero-info{
-  display:flex;gap:20px;flex-wrap:wrap;
-  list-style:none;padding:0;opacity:.85
-}
+    /* HERO */
+    .hero{
+      padding:60px 20px 40px;
+      background:radial-gradient(circle at top,#0f172a,#020617);
+    }
+    .hero-content{
+      max-width:1000px;
+      margin:auto;
+    }
+    .badge{
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:30px;
+      background:rgba(34,197,94,.15);
+      color:#22c55e;
+      font-size:13px;
+      margin-bottom:18px;
+    }
+    .hero h2{
+      font-size:34px;
+      line-height:1.2;
+      margin:10px 0 15px;
+    }
+    .hero p{
+      opacity:.85;
+      max-width:800px;
+    }
+    .hero-btn{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:25px 0;
+    }
+    .btn-main{
+      background:linear-gradient(90deg,#06b6d4,#22c55e);
+      color:#000;
+      padding:14px 22px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    .btn-wa{
+      border:1px solid #22c55e;
+      color:#22c55e;
+      padding:14px 22px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    .hero-info{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      list-style:none;
+      padding:0;
+      margin-top:15px;
+      opacity:.85;
+    }
 
-/* PRODUK */
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:30px 20px 100px;
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
-  gap:18px;
-}
-.card{
-  background:#0b1220;
-  border-radius:16px;
-  padding:18px;
-  text-align:center;
-}
-.card h3{margin:10px 0}
-.price{color:#22c55e;font-weight:bold}
-.btn{
-  display:block;
-  margin-top:10px;
-  padding:10px;
-  border-radius:8px;
-  background:#22c55e;
-  color:#000;
-  text-decoration:none;
-  font-weight:bold;
-}
+    /* PRODUK */
+    .container{
+      max-width:1200px;
+      margin:auto;
+      padding:30px 20px 80px;
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+      gap:18px;
+    }
+    .card{
+      background:#0b1220;
+      border-radius:16px;
+      padding:18px;
+      text-align:center;
+      box-shadow:0 0 15px rgba(0,0,0,.4);
+    }
+    .card img{
+      width:48px;
+      height:48px;
+      margin-bottom:10px;
+      object-fit:contain;
+    }
+    .card h3{
+      margin:5px 0;
+      font-size:16px;
+    }
+    .price{
+      color:#22c55e;
+      font-weight:bold;
+      margin:6px 0 12px;
+    }
+    .btn{
+      display:block;
+      padding:10px;
+      border-radius:8px;
+      background:#22c55e;
+      color:#000;
+      text-decoration:none;
+      font-weight:bold;
+      margin-bottom:8px;
+    }
+    .btn.outline{
+      background:transparent;
+      border:1px solid #22c55e;
+      color:#22c55e;
+    }
 
-/* FLOAT CART */
-.cart{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#22c55e;
-  color:#000;
-  padding:14px 18px;
-  border-radius:50px;
-  font-weight:bold;
-  cursor:pointer;
-  z-index:9;
-}
-
-/* CART MODAL */
-.cart-box{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.6);
-  display:none;
-  justify-content:center;
-  align-items:center;
-  z-index:10;
-}
-.cart-content{
-  background:#0b1220;
-  width:90%;
-  max-width:400px;
-  border-radius:18px;
-  padding:20px;
-}
-.cart-content h3{margin-top:0}
-.cart-item{font-size:14px;margin-bottom:8px}
-.checkout{
-  margin-top:15px;
-  width:100%;
-  padding:12px;
-  background:#22c55e;
-  color:#000;
-  border:none;
-  border-radius:10px;
-  font-weight:bold;
-}
-.close{
-  margin-top:10px;
-  text-align:center;
-  opacity:.7;
-  cursor:pointer;
-}
-</style>
+    /* FLOAT BUTTON */
+    .float-wa{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#22c55e;
+      color:#000;
+      padding:14px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:bold;
+      box-shadow:0 0 15px rgba(0,0,0,.5);
+    }
+  </style>
 </head>
 
 <body>
@@ -147,68 +150,88 @@ header{
 <header>ZEA UNIVERSE</header>
 
 <section class="hero">
-<div class="hero-content">
-<span class="badge">Solusi langganan digital premium</span>
-<h2>LAYANAN DIGITAL PREMIUM<br>DALAM SATU PORTAL</h2>
-<p>Netflix, YouTube, Spotify, Canva, ChatGPT, Google One, Apple Music — cepat & aman.</p>
+  <div class="hero-content">
+    <span class="badge">Solusi langganan digital premium cepat & terpercaya</span>
+    <h2>LAYANAN DIGITAL PREMIUM<br>DALAM SATU PORTAL</h2>
+    <p>
+      Kelola YouTube, Netflix, Spotify, Canva, ChatGPT, Google One,
+      Apple Music dan layanan digital lainnya dengan aman & harga terjangkau.
+    </p>
 
-<div class="hero-btn">
-<a href="#produk" class="btn-main">Lihat Produk</a>
-<a href="https://wa.me/6281293403706" class="btn-wa">Hubungi Admin</a>
-</div>
+    <div class="hero-btn">
+      <a href="#produk" class="btn-main">Lihat Daftar Produk</a>
+      <a href="https://wa.me/6281293403706" class="btn-wa">Hubungi Admin</a>
+    </div>
 
-<ul class="hero-info">
-<li>⚡ Proses 1–10 menit</li>
-<li>🛡️ Garansi layanan</li>
-<li>⭐ Pelanggan puas</li>
-</ul>
-</div>
+    <ul class="hero-info">
+      <li>⚡ Proses 1–10 menit</li>
+      <li>🛡️ Garansi sesuai ketentuan</li>
+      <li>⭐ Ribuan pelanggan puas</li>
+    </ul>
+  </div>
 </section>
 
 <section id="produk" class="container">
-<div class="card"><h3>YouTube Premium</h3><div class="price">35K / bulan</div><button class="btn" onclick="add('YouTube Premium 35K')">Tambah</button></div>
-<div class="card"><h3>Netflix</h3><div class="price">30K / bulan</div><button class="btn" onclick="add('Netflix 30K')">Tambah</button></div>
-<div class="card"><h3>Canva</h3><div class="price">20K / bulan</div><button class="btn" onclick="add('Canva 20K')">Tambah</button></div>
-<div class="card"><h3>ChatGPT Pro</h3><div class="price">50K / bulan</div><button class="btn" onclick="add('ChatGPT Pro 50K')">Tambah</button></div>
-<div class="card"><h3>Google One</h3><div class="price">Mulai 25K</div><button class="btn" onclick="add('Google One')">Tambah</button></div>
-<div class="card"><h3>Spotify</h3><div class="price">Mulai 25K</div><button class="btn" onclick="add('Spotify')">Tambah</button></div>
-<div class="card"><h3>Apple Music</h3><div class="price">Mulai 30K</div><button class="btn" onclick="add('Apple Music')">Tambah</button></div>
+
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
+    <h3>YouTube Premium</h3>
+    <div class="price">Rp35.000 / bulan</div>
+    <a class="btn" href="#">Tambah Keranjang</a>
+    <a class="btn outline" href="#">Lihat Varian</a>
+  </div>
+
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+    <h3>Netflix Premium</h3>
+    <div class="price">Rp30.000 / bulan</div>
+    <a class="btn" href="#">Tambah Keranjang</a>
+    <a class="btn outline" href="#">Lihat Varian</a>
+  </div>
+
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg">
+    <h3>Canva Premium</h3>
+    <div class="price">Rp20.000 / bulan</div>
+    <a class="btn" href="#">Tambah Keranjang</a>
+    <a class="btn outline" href="#">Lihat Varian</a>
+  </div>
+
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg">
+    <h3>ChatGPT Pro</h3>
+    <div class="price">Rp50.000 / bulan</div>
+    <a class="btn" href="#">Tambah Keranjang</a>
+    <a class="btn outline" href="#">Lihat Varian</a>
+  </div>
+
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_One_logo.svg">
+    <h3>Google One</h3>
+    <div class="price">Mulai Rp25.000</div>
+    <a class="btn" href="#">Tambah Keranjang</a>
+    <a class="btn outline" href="#">Lihat Varian</a>
+  </div>
+
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg">
+    <h3>Spotify Premium</h3>
+    <div class="price">Mulai Rp25.000</div>
+    <a class="btn" href="#">Tambah Keranjang</a>
+    <a class="btn outline" href="#">Lihat Varian</a>
+  </div>
+
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg">
+    <h3>Apple Music</h3>
+    <div class="price">Mulai Rp30.000</div>
+    <a class="btn" href="#">Tambah Keranjang</a>
+    <a class="btn outline" href="#">Lihat Varian</a>
+  </div>
+
 </section>
 
-<!-- CART -->
-<div class="cart" onclick="openCart()">🛒 <span id="count">0</span></div>
-
-<div class="cart-box" id="cartBox">
-  <div class="cart-content">
-    <h3>Keranjang</h3>
-    <div id="list"></div>
-    <button class="checkout" onclick="checkout()">Checkout WhatsApp</button>
-    <div class="close" onclick="closeCart()">Tutup</div>
-  </div>
-</div>
-
-<script>
-let cart=[];
-
-function add(item){
-  cart.push(item);
-  document.getElementById('count').innerText=cart.length;
-}
-
-function openCart(){
-  document.getElementById('cartBox').style.display='flex';
-  document.getElementById('list').innerHTML=cart.map(i=>`<div class="cart-item">• ${i}</div>`).join('');
-}
-
-function closeCart(){
-  document.getElementById('cartBox').style.display='none';
-}
-
-function checkout(){
-  let text="Halo Admin ZEA UNIVERSE,%0ASaya mau pesan:%0A"+cart.join("%0A");
-  window.open("https://wa.me/6281293403706?text="+text);
-}
-</script>
+<a class="float-wa" href="https://wa.me/6281293403706">WhatsApp</a>
 
 </body>
 </html>
