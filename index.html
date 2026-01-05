@@ -44,15 +44,6 @@ header{
   font-weight:bold;
   font-size:18px;
 }
-  </html><section class="section">
-<h2>Kenapa Pilih ZEA UNIVERSE?</h2>
-<ul style="line-height:1.8;opacity:.9">
-<li>✅ Aktivasi cepat (1–10 menit)</li>
-<li>✅ Garansi replace</li>
-<li>✅ Admin responsif</li>
-<li>✅ Ribuan user puas</li>
-</ul>
-</section>
 
 .logo img{
   height:34px;
@@ -141,56 +132,9 @@ header{
   border-radius:10px;
   text-decoration:none;
   font-weight:bold;
-}<!-- KEUNGGULAN -->
-<section class="section" id="keunggulan">
-  <h2>Keunggulan ZEA UNIVERSE</h2>
-  <p style="opacity:.8;max-width:700px">
-    Tidak hanya harga bersahabat, kami juga mengutamakan proses yang jelas,
-    aman, dan mudah dipahami oleh semua pengguna.
-  </p>
+}
 
-  <div class="grid" style="margin-top:30px">
-
-    <div class="card">
-      <div class="icon">🛡️</div>
-      <h3>Terstruktur & Terpercaya</h3>
-      <p class="small">
-        Semua order dicatat rapi sehingga mudah ditelusuri.
-        Proses dan ketentuan garansi dijelaskan secara transparan.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">⚡</div>
-      <h3>Proses Cepat & Terukur</h3>
-      <p class="small">
-        Estimasi aktivasi 1–10 menit pada jam operasional,
-        dengan pemberitahuan jelas jika terjadi antrean.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">🔄</div>
-      <h3>Garansi Masa Pakai</h3>
-      <p class="small">
-        Jika terjadi kendala dalam masa aktif,
-        admin siap membantu sesuai ketentuan yang berlaku.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">💬</div>
-      <h3>Admin Responsif</h3>
-      <p class="small">
-        Komunikasi cepat & jelas melalui WhatsApp
-        untuk memastikan kenyamanan pelanggan.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-/* ===== PRODUK ===== */
+/* ===== SECTION ===== */
 .section{
   max-width:1200px;
   margin:auto;
@@ -236,6 +180,14 @@ header{
   font-weight:bold;
 }
 
+/* ===== LOGO PRODUK (TAMBAHAN) ===== */
+.product-logo{
+  height:46px;
+  margin-bottom:10px;
+  object-fit:contain;
+  filter:drop-shadow(0 0 6px rgba(0,0,0,.4));
+}
+
 /* ===== FAQ ===== */
 details{
   background:#020617;
@@ -271,7 +223,6 @@ footer{
 
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="nav">
     <div class="logo">
@@ -293,7 +244,6 @@ footer{
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-wrap">
     <div class="hero-logo">
@@ -310,50 +260,56 @@ footer{
   </div>
 </section>
 
-<!-- PRODUK -->
 <section class="section" id="produk">
 <h2>Produk Populer</h2>
 
 <div class="grid">
+
   <div class="card">
+    <img src="assets/logo/youtube.png" class="product-logo">
     <h3>YouTube Premium</h3>
     <div class="price">Rp 35.000 / bulan</div>
-    <button onclick="addCart()">Tambah<button onclick="addCart('YouTube Premium - Rp35.000')">Tambah</button>
+    <button onclick="addCart()">Tambah</button>
   </div>
 
   <div class="card">
+    <img src="assets/logo/netflix.png" class="product-logo">
     <h3>Netflix</h3>
     <div class="price">Rp 30.000 / bulan</div>
     <button onclick="addCart()">Tambah</button>
   </div>
 
   <div class="card">
+    <img src="assets/logo/canva.png" class="product-logo">
     <h3>Canva Pro</h3>
     <div class="price">Rp 20.000 / bulan</div>
     <button onclick="addCart()">Tambah</button>
   </div>
 
   <div class="card">
+    <img src="assets/logo/chatgpt.png" class="product-logo">
     <h3>ChatGPT Pro</h3>
     <div class="price">Rp 50.000 / bulan</div>
     <button onclick="addCart()">Tambah</button>
   </div>
 
   <div class="card">
+    <img src="assets/logo/spotify.png" class="product-logo">
     <h3>Spotify</h3>
     <div class="price">Rp 25.000 / bulan</div>
     <button onclick="addCart()">Tambah</button>
   </div>
 
   <div class="card">
+    <img src="assets/logo/applemusic.png" class="product-logo">
     <h3>Apple Music</h3>
     <div class="price">Rp 25.000 / bulan</div>
     <button onclick="addCart()">Tambah</button>
   </div>
+
 </div>
 </section>
 
-<!-- FAQ -->
 <section class="section" id="faq">
 <h2>FAQ</h2>
 
@@ -370,88 +326,9 @@ footer{
 <details>
   <summary>Jika ada kendala?</summary>
   <p>Admin siap bantu via WhatsApp.</p>
-</details><!-- ULASAN -->
-<section class="section" id="ulasan">
-  <h2>Apa Kata Mereka?</h2>
-
-  <div class="grid">
-    <div class="card">
-      <p>“Langganan YouTube langsung aktif, admin fast respon 👍”</p>
-      <div class="price">⭐⭐⭐⭐⭐</div>
-      <small>- Andi, Jakarta</small>
-    </div>
-
-    <div class="card">
-      <p>“Netflix aman, murah, sudah 3 bulan pakai.”</p>
-      <div class="price">⭐⭐⭐⭐⭐</div>
-      <small>- Rina, Makassar</small>
-    </div>
-
-    <div class="card">
-      <p>“Canva Pro cocok buat kerja, recommended banget.”</p>
-      <div class="price">⭐⭐⭐⭐⭐</div>
-      <small>- Dedi, Bandung</small>
-    </div>
-  </div>
-</section><!-- METODE PEMBAYARAN -->
-<section class="section" id="pembayaran">
-  <h2>Metode Pembayaran</h2>
-
-  <div class="card" style="padding:24px">
-    <p style="opacity:.8;margin-bottom:18px">
-      Kami mendukung berbagai metode pembayaran untuk kemudahan transaksi Anda:
-    </p>
-
-    <div style="
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-      gap:14px;
-    ">
-
-      <div class="card" style="text-align:center">
-        <strong>QRIS</strong>
-        <p class="small">All Payment</p>
-      </div>
-
-      <div class="card" style="text-align:center">
-        <strong>Bank BCA</strong>
-        <p class="small">Transfer Manual</p>
-      </div>
-
-      <div class="card" style="text-align:center">
-        <strong>Bank Mandiri</strong>
-        <p class="small">Transfer Manual</p>
-      </div>
-
-      <div class="card" style="text-align:center">
-        <strong>ShopeePay</strong>
-        <p class="small">E-Wallet</p>
-      </div>
-
-      <div class="card" style="text-align:center">
-        <strong>DANA</strong>
-        <p class="small">E-Wallet</p>
-      </div>
-
-      <div class="card" style="text-align:center">
-        <strong>OVO</strong>
-        <p class="small">E-Wallet</p>
-      </div>
-
-      <div class="card" style="text-align:center">
-        <strong>GoPay</strong>
-        <p class="small">E-Wallet</p>
-      </div>
-
-    </div>
-
-    <p class="small" style="margin-top:18px">
-      *Metode pembayaran menyesuaikan kebijakan operasional ZEA UNIVERSE.
-    </p>
-  </div>
+</details>
 </section>
 
-<!-- FOOTER -->
 <footer id="kontak">
   <div class="footer-wrap">
     <h3>ZEA UNIVERSE</h3>
@@ -470,4 +347,4 @@ function addCart(){
 </script>
 
 </body>
-
+</html>
