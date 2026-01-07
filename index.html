@@ -207,6 +207,36 @@ footer{
   opacity:.6;
   font-size:13px;
 }
+
+/* ===== LOGO ANIMATION ===== */
+.logo{
+  animation: logoFade 0.8s ease-out;
+}
+
+.logo img{
+  animation: logoRotate 6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes logoFade{
+  from{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes logoRotate{
+  0%{ transform:rotate(0deg); }
+  25%{ transform:rotate(1.5deg); }
+  50%{ transform:rotate(0deg); }
+  75%{ transform:rotate(-1.5deg); }
+  100%{ transform:rotate(0deg); }
+}
+
 </style>
 </head>
 
