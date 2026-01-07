@@ -41,13 +41,20 @@ header{
 .logo{
   display:flex;
   align-items:center;
-  gap:10px;
-  font-weight:bold;
-  font-size:18px;
+  gap:12px;
+  font-weight:800;
+  font-size:22px; /* teks lebih gede */
+  letter-spacing:1px;
 }
 
 .logo img{
-  height:34px;
+  height:48px; /* logo gambar lebih gede */
+}
+.logo span{
+  background:linear-gradient(90deg,#22c55e,#06b6d4,#a855f7);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 0 12px rgba(34,197,94,.35);
 }
 
 .menu{
@@ -353,4 +360,4 @@ function addCart(){
 </script>
 
 </body>
-    </html>
+</html>
