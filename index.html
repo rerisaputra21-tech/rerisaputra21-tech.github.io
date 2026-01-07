@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>ZEA UNIVERSE</title>
 
 <style>
-/* ===== RESET ===== */
+/* ================= RESET ================= */
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:#020617;color:#e5e7eb;transition:.3s}
-body.light{background:#f8fafc;color:#020617}
+:root{
+  --bg:#020617;
+  --fg:#e5e7eb;
+  --muted:#94a3b8;
+  --card:#020617;
+  --line:#1e293b;
+  --brand1:#06b6d4;
+  --brand2:#22c55e;
+}
+body{
+  background:var(--bg);
+  color:var(--fg);
+  transition:.25s;
+}
+body.light{
+  --bg:#f8fafc;
+  --fg:#020617;
+  --muted:#475569;
+  --card:#ffffff;
+  --line:#e5e7eb;
+}
 
-/* ===== HEADER ===== */
-.header-premium{
+/* ================= HEADER ================= */
+.header{
   position:sticky;top:0;z-index:999;
   background:rgba(2,6,23,.85);
   backdrop-filter:blur(12px);
-  border-bottom:1px solid #1e293b;
+  border-bottom:1px solid var(--line);
 }
-body.light .header-premium{background:#fff}
+body.light .header{background:#fff}
 .header-wrap{
   max-width:1200px;margin:auto;
   padding:14px 20px;
@@ -26,14 +45,12 @@ body.light .header-premium{background:#fff}
 }
 .brand{font-size:22px;font-weight:900}
 .brand .zea{
-  background:linear-gradient(90deg,#06b6d4,#22c55e);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+  background:linear-gradient(90deg,var(--brand1),var(--brand2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
 }
 .brand span{
-  background:linear-gradient(90deg,#22c55e,#a855f7);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+  background:linear-gradient(90deg,var(--brand2),#a855f7);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
 }
 .menu{display:flex;gap:18px}
 .menu a{color:inherit;text-decoration:none;font-size:14px;opacity:.8}
@@ -41,20 +58,21 @@ body.light .header-premium{background:#fff}
 .header-icons{display:flex;gap:10px;align-items:center}
 .icon-btn{
   width:38px;height:38px;border-radius:12px;
-  border:1px solid #1e293b;
-  background:transparent;color:inherit;
-  cursor:pointer;font-size:16px;
+  border:1px solid var(--line);
+  background:transparent;color:inherit;cursor:pointer;
 }
-.cart{position:relative;font-size:22px;cursor:pointer}
+.cart{
+  position:relative;font-size:22px;cursor:pointer;
+}
 .cart span{
   position:absolute;top:-6px;right:-8px;
-  background:#22c55e;color:#000;
+  background:var(--brand2);color:#000;
   font-size:11px;padding:2px 6px;border-radius:50%;
 }
 
-/* ===== HERO ===== */
+/* ================= HERO ================= */
 .hero{
-  padding:70px 20px;
+  padding:70px 20px 60px;
   background:radial-gradient(circle at top,#0f172a,#020617);
 }
 .hero-wrap{max-width:1000px;margin:auto;text-align:center}
@@ -62,13 +80,12 @@ body.light .header-premium{background:#fff}
 .hero p{opacity:.85;max-width:720px;margin:auto}
 .hero-btn{margin-top:26px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
 .btn-main,.btn-wa{
-  padding:14px 24px;border-radius:12px;
-  font-weight:bold;text-decoration:none;
+  padding:14px 24px;border-radius:12px;font-weight:bold;text-decoration:none
 }
-.btn-main{background:linear-gradient(90deg,#06b6d4,#22c55e);color:#000}
-.btn-wa{border:1px solid #22c55e;color:#22c55e}
+.btn-main{background:linear-gradient(90deg,var(--brand1),var(--brand2));color:#000}
+.btn-wa{border:1px solid var(--brand2);color:var(--brand2)}
 
-/* ===== RATING ===== */
+/* ================= RATING ================= */
 .rating-wrap{
   margin-top:40px;
   display:grid;
@@ -76,94 +93,85 @@ body.light .header-premium{background:#fff}
   gap:18px;
 }
 .rating-card{
-  border:1px solid #1e293b;
-  border-radius:16px;padding:20px;
+  border:1px solid var(--line);
+  border-radius:16px;padding:20px;background:var(--card);
 }
 .rating-big{font-size:28px;font-weight:bold}
 .stars{display:flex;gap:4px;margin:6px 0}
 .stars svg{width:18px;fill:#facc15}
 .rating-text{opacity:.7;font-size:14px}
 
-/* ===== SECTION ===== */
+/* ================= SECTION ================= */
 .section{max-width:1200px;margin:auto;padding:60px 20px}
 .section h2{font-size:26px;margin-bottom:24px}
 
-/* ===== PRODUK ===== */
+/* ================= PRODUK ================= */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:18px;
 }
 .card{
-  border:1px solid #1e293b;
-  border-radius:16px;padding:18px;
+  border:1px solid var(--line);
+  border-radius:16px;padding:18px;background:var(--card);
 }
 .card h3{display:flex;align-items:center;gap:8px}
-.card svg{width:22px}
-.price{color:#22c55e;font-weight:bold;margin:10px 0}
+.card svg{width:22px;height:22px}
+.price{color:var(--brand2);font-weight:bold;margin:10px 0}
 .card button{
-  width:100%;padding:10px;border-radius:10px;
-  background:#22c55e;color:#000;
-  border:none;font-weight:bold;cursor:pointer;
+  width:100%;background:var(--brand2);color:#000;border:none;
+  padding:10px;border-radius:10px;font-weight:bold;cursor:pointer;
 }
 
-/* ===== CART PANEL ===== */
+/* ================= CART PANEL ================= */
 .cart-panel{
   position:fixed;top:0;right:-100%;
   width:320px;height:100%;
-  background:#020617;
-  border-left:1px solid #1e293b;
-  padding:20px;
-  transition:.3s;z-index:9999;
+  background:var(--card);
+  border-left:1px solid var(--line);
+  padding:20px;transition:.3s;z-index:9999;
 }
 .cart-panel.open{right:0}
-.cart-panel h3{margin-bottom:12px}
-.cart-list{font-size:14px;opacity:.9}
+.cart-panel h3{margin-bottom:10px}
+.cart-list{font-size:14px;margin-bottom:14px}
 .checkout{
-  margin-top:14px;
-  width:100%;padding:12px;
-  background:#22c55e;color:#000;
-  border:none;border-radius:10px;
-  font-weight:bold;cursor:pointer;
+  width:100%;padding:12px;border:none;border-radius:10px;
+  background:var(--brand2);color:#000;font-weight:bold;cursor:pointer;margin-top:8px;
 }
 
-/* ===== QRIS MODAL ===== */
+/* ================= QRIS MODAL ================= */
 .modal{
-  position:fixed;inset:0;
-  background:rgba(0,0,0,.6);
-  display:none;align-items:center;justify-content:center;
+  position:fixed;inset:0;background:rgba(0,0,0,.6);
+  display:none;align-items:center;justify-content:center;z-index:9999;
 }
 .modal.active{display:flex}
 .modal-box{
-  background:#020617;
-  padding:24px;border-radius:16px;
-  text-align:center;border:1px solid #1e293b;
+  background:var(--card);padding:24px;border-radius:16px;
+  border:1px solid var(--line);text-align:center;max-width:320px;width:90%;
 }
 
-/* ===== LIVE CHAT ===== */
+/* ================= LIVE CHAT ================= */
 .chat{
   position:fixed;bottom:20px;right:20px;
-  background:linear-gradient(90deg,#06b6d4,#22c55e);
-  width:56px;height:56px;
-  border-radius:50%;
+  width:56px;height:56px;border-radius:50%;
+  background:linear-gradient(90deg,var(--brand1),var(--brand2));
   display:flex;align-items:center;justify-content:center;
-  font-size:24px;color:#000;cursor:pointer;
+  font-size:24px;color:#000;cursor:pointer;z-index:999;
 }
 
-/* ===== FOOTER ===== */
-footer{border-top:1px solid #1e293b;padding:40px 20px}
+/* ================= FOOTER ================= */
+footer{border-top:1px solid var(--line);padding:40px 20px}
 .small{opacity:.6;font-size:13px}
 
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-  .menu{display:none}
-}
+/* ================= MOBILE ================= */
+@media(max-width:768px){.menu{display:none}}
 </style>
 </head>
 
 <body>
 
-<header class="header-premium">
+<!-- ================= HEADER ================= -->
+<header class="header">
   <div class="header-wrap">
     <div class="brand"><span class="zea">ZEA</span> <span>UNIVERSE</span></div>
     <nav class="menu">
@@ -178,10 +186,11 @@ footer{border-top:1px solid #1e293b;padding:40px 20px}
   </div>
 </header>
 
+<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-wrap">
     <h1>Langganan Digital Murah & Aman</h1>
-    <p>YouTube, Netflix, Spotify, Canva, ChatGPT, Apple Music & lainnya.</p>
+    <p>YouTube, Netflix, Spotify, Apple Music, Canva, ChatGPT & lainnya.</p>
     <div class="hero-btn">
       <a href="#produk" class="btn-main">Lihat Produk</a>
       <a href="#" class="btn-wa">Hubungi Admin</a>
@@ -189,7 +198,7 @@ footer{border-top:1px solid #1e293b;padding:40px 20px}
 
     <div class="rating-wrap">
       <div class="rating-card">
-        <div class="rating-big">1.000+</div>
+        <div class="rating-big">1.200+</div>
         <div class="rating-text">Pesanan terselesaikan</div>
       </div>
       <div class="rating-card">
@@ -207,26 +216,38 @@ footer{border-top:1px solid #1e293b;padding:40px 20px}
   </div>
 </section>
 
+<!-- ================= PRODUK ================= -->
 <section class="section" id="produk">
-<h2>Produk Digital</h2>
-<div class="grid" id="productGrid"></div>
+  <h2>Produk Digital</h2>
+  <div class="grid" id="productGrid"></div>
 </section>
 
-<footer id="faq">
-  <p><b>Pembayaran:</b> BCA • Aladin • QRIS • ShopeePay • GoPay</p>
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq">
+  <h2>FAQ</h2>
+  <p>Aktivasi 1–10 menit • Support admin • Garansi aktif</p>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p><b>Pembayaran:</b> Transfer Bank • Virtual Account • QRIS</p>
   <p class="small">© 2026 ZEA UNIVERSE</p>
 </footer>
 
+<!-- ================= CART PANEL ================= -->
 <div class="cart-panel" id="cartPanel">
   <h3>Keranjang</h3>
   <div class="cart-list" id="cartList"></div>
-  <button class="checkout" onclick="openQris()">Checkout QRIS</button>
+  <button class="checkout" onclick="checkoutWA()">Checkout WhatsApp</button>
+  <button class="checkout" onclick="openQris()">Bayar QRIS</button>
 </div>
 
+<!-- ================= QRIS MODAL ================= -->
 <div class="modal" id="qrisModal">
   <div class="modal-box">
-    <h3>Bayar via QRIS</h3>
-    <p>(QR Code di sini)</p>
+    <h3>QRIS Payment</h3>
+    <p>Scan QRIS / Virtual Account</p>
+    <p class="small">(Ganti gambar QRIS di sini)</p>
     <button class="checkout" onclick="closeQris()">Tutup</button>
   </div>
 </div>
@@ -234,28 +255,41 @@ footer{border-top:1px solid #1e293b;padding:40px 20px}
 <div class="chat">💬</div>
 
 <script>
+/* ===== PRODUK + SVG ===== */
 const products=[
-"YouTube","Netflix","Spotify","Apple Music","Canva","ChatGPT",
-"Google One","CapCut","Zoom","Microsoft 365"
+  {n:"YouTube",svg:`<svg viewBox="0 0 24 24"><path fill="#ff0000" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8z"/><path fill="#fff" d="M9.5 15.5V8.5l6 3.5z"/></svg>`},
+  {n:"Netflix",svg:`<svg viewBox="0 0 24 24"><path fill="#e50914" d="M5 3h4l6 18h-4z"/><path fill="#b20710" d="M9 3h4l6 18h-4z"/></svg>`},
+  {n:"Spotify",svg:`<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1db954"/><path d="M6 9c4-1 8-.5 12 1" stroke="#000" stroke-width="1.5" fill="none"/><path d="M6 12c4-1 7-.5 10 .8" stroke="#000" stroke-width="1.5" fill="none"/><path d="M6 15c3-.8 6-.4 8 .6" stroke="#000" stroke-width="1.5" fill="none"/></svg>`},
+  {n:"Apple Music",svg:`<svg viewBox="0 0 24 24"><path fill="#fa2d48" d="M16 3v12a3 3 0 1 1-2-2.83V6H8V3z"/></svg>`},
+  {n:"Canva",svg:`<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#7d2ae8"/><path fill="#fff" d="M14 7a4 4 0 1 0 0 10"/></svg>`},
+  {n:"ChatGPT",svg:`<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#10a37f"/><path fill="#fff" d="M8 8l8 8M16 8l-8 8"/></svg>`},
+  {n:"Google One",svg:`<svg viewBox="0 0 24 24"><path fill="#4285f4" d="M12 2l10 6v8l-10 6L2 16V8z"/></svg>`},
+  {n:"CapCut",svg:`<svg viewBox="0 0 24 24"><rect width="24" height="24" rx="4"/><path fill="#fff" d="M6 7h12l-6 10z"/></svg>`},
+  {n:"Zoom",svg:`<svg viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#2d8cff"/><rect x="6" y="8" width="8" height="8" rx="2" fill="#fff"/></svg>`},
+  {n:"Microsoft 365",svg:`<svg viewBox="0 0 24 24"><path fill="#f25022" d="M2 2h10v10H2z"/><path fill="#7fba00" d="M12 2h10v10H12z"/><path fill="#00a4ef" d="M2 12h10v10H2z"/><path fill="#ffb900" d="M12 12h10v10H12z"/></svg>`}
 ];
-let cart=[];
 
+let cart=[];
 const grid=document.getElementById("productGrid");
 products.forEach(p=>{
   grid.innerHTML+=`
   <div class="card">
-    <h3>${p}</h3>
+    <h3>${p.svg} ${p.n}</h3>
     <div class="price">Mulai Rp 25.000</div>
-    <button onclick="addCart('${p}')">Tambah</button>
+    <button onclick="addCart('${p.n}')">Tambah</button>
   </div>`;
 });
 
 function addCart(p){
   cart.push(p);
   document.getElementById("cartCount").innerText=cart.length;
-  document.getElementById("cartList").innerHTML=cart.join("<br>");
+  document.getElementById("cartList").innerHTML=cart.map(i=>"• "+i).join("<br>");
 }
 function toggleCart(){document.getElementById("cartPanel").classList.toggle("open")}
+function checkoutWA(){
+  const msg=encodeURIComponent("Halo Admin, saya mau order:\n- "+cart.join("\n- "));
+  window.open("https://wa.me/6281293403706?text="+msg);
+}
 function openQris(){document.getElementById("qrisModal").classList.add("active")}
 function closeQris(){document.getElementById("qrisModal").classList.remove("active")}
 function toggleTheme(){document.body.classList.toggle("light")}
