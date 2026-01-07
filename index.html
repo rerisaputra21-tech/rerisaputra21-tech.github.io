@@ -6,7 +6,6 @@
 <title>ZEA UNIVERSE</title>
 
 <style>
-
 /* ===== RESET ===== */
 *{
   margin:0;
@@ -14,159 +13,198 @@
   box-sizing:border-box;
   font-family:Arial, Helvetica, sans-serif;
 }
-
 body{
   background:#020617;
   color:#e5e7eb;
 }
 
-/* ===== HEADER PREMIUM (ALA D&D STYLE) ===== */
+/* ===== HEADER PREMIUM ===== */
 .header-premium{
   position:sticky;
   top:0;
   z-index:999;
-  background:rgba(2,6,23,.9);
+  background:rgba(2,6,23,.85);
   backdrop-filter:blur(12px);
   border-bottom:1px solid #1e293b;
 }
-
 .header-wrap{
   max-width:1200px;
   margin:auto;
-  padding:16px 20px;
+  padding:14px 20px;
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
 
+/* BRAND */
 .brand{
   font-size:22px;
-  font-weight:800;
+  font-weight:900;
   letter-spacing:1px;
 }
-
+.brand .zea{
+  background:linear-gradient(90deg,#06b6d4,#22c55e);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 .brand span{
-  background:linear-gradient(90deg,#7c3aed,#06b6d4,#22c55e);
+  background:linear-gradient(90deg,#22c55e,#a855f7);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
+/* ICON */
 .header-icons{
   display:flex;
   gap:12px;
 }
-
 .icon-btn{
-  width:40px;
-  height:40px;
+  width:38px;
+  height:38px;
   border-radius:12px;
   border:1px solid #1e293b;
-  background:rgba(15,23,42,.8);
+  background:rgba(255,255,255,.05);
   color:#e5e7eb;
   font-size:18px;
   cursor:pointer;
 }
 
-/* ===== HERO ===== */
-.hero{
-  padding:70px 20px 50px;
-  background:radial-gradient(circle at top,#0f172a,#020617);
+/* CART */
+.cart{
+  position:relative;
+  font-size:22px;
+  cursor:pointer;
+}
+.cart span{
+  position:absolute;
+  top:-6px;
+  right:-8px;
+  background:#22c55e;
+  color:#000;
+  font-size:11px;
+  padding:2px 6px;
+  border-radius:50%;
 }
 
+/* ===== HERO ===== */
+.hero{
+  padding:70px 20px 60px;
+  background:radial-gradient(circle at top,#0f172a,#020617);
+}
 .hero-wrap{
   max-width:1000px;
   margin:auto;
   text-align:center;
 }
-
 .hero h1{
   font-size:36px;
   margin-bottom:12px;
 }
-
 .hero p{
   opacity:.85;
-  max-width:700px;
+  max-width:720px;
   margin:auto;
 }
-
 .hero-btn{
-  margin-top:25px;
+  margin-top:26px;
   display:flex;
   justify-content:center;
   gap:14px;
   flex-wrap:wrap;
 }
-
 .btn-main{
   background:linear-gradient(90deg,#06b6d4,#22c55e);
   color:#000;
-  padding:14px 22px;
-  border-radius:10px;
-  text-decoration:none;
+  padding:14px 24px;
+  border-radius:12px;
   font-weight:bold;
+  text-decoration:none;
 }
-
 .btn-wa{
   border:1px solid #22c55e;
   color:#22c55e;
-  padding:14px 22px;
-  border-radius:10px;
-  text-decoration:none;
+  padding:14px 24px;
+  border-radius:12px;
   font-weight:bold;
+  text-decoration:none;
+}
+
+/* ===== RATING ===== */
+.rating-wrap{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+.rating-card{
+  border:1px solid #1e293b;
+  border-radius:16px;
+  padding:20px;
+  background:#020617;
+}
+.rating-big{
+  font-size:28px;
+  font-weight:bold;
+}
+.stars{
+  display:flex;
+  gap:4px;
+  margin:6px 0;
+}
+.stars svg{
+  width:18px;
+  fill:#facc15;
+}
+.rating-text{
+  opacity:.7;
+  font-size:14px;
 }
 
 /* ===== SECTION ===== */
 .section{
   max-width:1200px;
   margin:auto;
-  padding:50px 20px;
+  padding:60px 20px;
 }
-
 .section h2{
   font-size:26px;
-  margin-bottom:25px;
+  margin-bottom:24px;
 }
 
+/* ===== PRODUK ===== */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:18px;
 }
-
 .card{
-  background:#020617;
   border:1px solid #1e293b;
-  border-radius:14px;
+  border-radius:16px;
   padding:18px;
 }
-
 .price{
   color:#22c55e;
   font-weight:bold;
   margin:10px 0;
 }
-
 .card button{
   width:100%;
   background:#22c55e;
   color:#000;
   border:none;
   padding:10px;
-  border-radius:8px;
-  cursor:pointer;
+  border-radius:10px;
   font-weight:bold;
+  cursor:pointer;
 }
 
 /* ===== FAQ ===== */
 details{
-  background:#020617;
   border:1px solid #1e293b;
-  border-radius:10px;
+  border-radius:12px;
   padding:14px;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
-
 summary{
   cursor:pointer;
   font-weight:bold;
@@ -174,72 +212,85 @@ summary{
 
 /* ===== FOOTER ===== */
 footer{
-  background:#020617;
   border-top:1px solid #1e293b;
   padding:40px 20px;
 }
-
 .footer-wrap{
   max-width:1200px;
   margin:auto;
 }
-
 .small{
   opacity:.6;
   font-size:13px;
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- HEADER PREMIUM -->
+<!-- HEADER -->
 <header class="header-premium">
   <div class="header-wrap">
-
     <div class="brand">
-  <span>ZEA UNIVERSE</span>
+      <span class="zea">ZEA</span> <span>UNIVERSE</span>
     </div>
 
     <div class="header-icons">
       <button class="icon-btn">🔍</button>
       <button class="icon-btn">☰</button>
+      <div class="cart">🛒<span id="cartCount">0</span></div>
     </div>
-
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-wrap">
-
     <h1>Langganan Digital Murah & Aman</h1>
-    <p>...</p>
+    <p>YouTube, Netflix, Canva, GPT, Spotify, Apple Music & lainnya. Aktivasi cepat, support admin.</p>
 
     <div class="hero-btn">
-      <a class="btn-main">Lihat Produk</a>
-      <a class="btn-wa">WhatsApp Admin</a>
+      <a href="#produk" class="btn-main">Lihat Produk</a>
+      <a href="https://wa.me/6281293403706" class="btn-wa">WhatsApp Admin</a>
     </div>
 
+    <!-- RATING -->
     <div class="rating-wrap">
-      <div class="rating-card">
-        <div class="rating-big">4.9/5</div>
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <div class="rating-text">Rata-rata kepuasan pelanggan</div>
-      </div>
-
       <div class="rating-card">
         <div class="rating-big">1.000+</div>
         <div class="rating-text">Pesanan digital terselesaikan</div>
       </div>
-    </div>
 
+      <div class="rating-card">
+        <div class="rating-big">4.9 / 5</div>
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.27l7.19-.61L12 2l2.81 6.66 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.27l7.19-.61L12 2l2.81 6.66 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.27l7.19-.61L12 2l2.81 6.66 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.27l7.19-.61L12 2l2.81 6.66 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.27l7.19-.61L12 2l2.81 6.66 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+        </div>
+        <div class="rating-text">Rata-rata kepuasan pelanggan</div>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- PRODUK -->
+<section class="section" id="produk">
+<h2>Produk Populer</h2>
+<div class="grid">
+  <div class="card"><h3>YouTube Premium</h3><div class="price">Rp 35.000 / bulan</div><button onclick="addCart()">Tambah</button></div>
+  <div class="card"><h3>Netflix</h3><div class="price">Rp 30.000 / bulan</div><button onclick="addCart()">Tambah</button></div>
+  <div class="card"><h3>Canva Pro</h3><div class="price">Rp 20.000 / bulan</div><button onclick="addCart()">Tambah</button></div>
+  <div class="card"><h3>ChatGPT Pro</h3><div class="price">Rp 50.000 / bulan</div><button onclick="addCart()">Tambah</button></div>
+  <div class="card"><h3>Spotify</h3><div class="price">Rp 25.000 / bulan</div><button onclick="addCart()">Tambah</button></div>
+  <div class="card"><h3>Apple Music</h3><div class="price">Rp 25.000 / bulan</div><button onclick="addCart()">Tambah</button></div>
+</div>
+</section>
+
 <!-- FAQ -->
-<section class="section" id="faq">
+<section class="section">
 <h2>FAQ</h2>
 <details><summary>Berapa lama aktivasi?</summary><p>1–10 menit setelah pembayaran.</p></details>
 <details><summary>Aman & legal?</summary><p>Mengikuti kebijakan platform resmi.</p></details>
@@ -247,7 +298,7 @@ footer{
 </section>
 
 <!-- FOOTER -->
-<footer id="kontak">
+<footer>
   <div class="footer-wrap">
     <h3>ZEA UNIVERSE</h3>
     <p>Jam operasional: <b>08.00 – 23.00 WITA</b></p>
@@ -256,5 +307,13 @@ footer{
   </div>
 </footer>
 
+<script>
+let cart = 0;
+function addCart(){
+  cart++;
+  document.getElementById("cartCount").innerText = cart;
+}
+</script>
+
 </body>
-</html>
+</html> 
