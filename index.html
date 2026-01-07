@@ -6,122 +6,68 @@
 <title>ZEA UNIVERSE</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial,Helvetica,sans-serif
-}
-body{
-  background:#020617;
-  color:#e5e7eb
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#020617;color:#e5e7eb}
 
-/* ===== HEADER ===== */
+/* HEADER */
 .header{
-  position:sticky;
-  top:0;
-  z-index:999;
+  position:sticky;top:0;z-index:999;
   background:rgba(2,6,23,.85);
   backdrop-filter:blur(12px);
   border-bottom:1px solid #1e293b
 }
 .header-wrap{
-  max-width:1200px;
-  margin:auto;
+  max-width:1200px;margin:auto;
   padding:16px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center
+  display:flex;align-items:center;justify-content:space-between
 }
-.brand{
-  font-size:22px;
-  font-weight:900
-}
+.brand{font-size:22px;font-weight:900}
 .brand .zea{
   background:linear-gradient(90deg,#06b6d4,#22c55e);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent
 }
 .brand span{
   background:linear-gradient(90deg,#22c55e,#a855f7);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent
 }
-.header-icons{
-  display:flex;
-  gap:12px;
-  align-items:center
-}
+.header-icons{display:flex;gap:12px;align-items:center}
 .icon-btn{
-  width:38px;
-  height:38px;
-  border-radius:12px;
+  width:38px;height:38px;border-radius:12px;
   border:1px solid #1e293b;
   background:rgba(255,255,255,.05);
-  color:#fff;
-  font-size:18px;
-  cursor:pointer
+  color:#fff;font-size:18px;cursor:pointer
 }
-.cart{
-  position:relative;
-  font-size:22px
-}
+.cart{position:relative;font-size:22px}
 .cart span{
-  position:absolute;
-  top:-6px;
-  right:-8px;
-  background:#22c55e;
-  color:#000;
-  font-size:11px;
-  padding:2px 6px;
-  border-radius:50%
+  position:absolute;top:-6px;right:-8px;
+  background:#22c55e;color:#000;
+  font-size:11px;padding:2px 6px;border-radius:50%
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
   padding:60px 16px;
   background:radial-gradient(circle at top,#0f172a,#020617)
 }
-.hero-wrap{
-  max-width:1000px;
-  margin:auto;
-  text-align:center
-}
-.hero h1{
-  font-size:34px;
-  margin-bottom:10px
-}
-.hero p{
-  opacity:.85;
-  max-width:720px;
-  margin:auto
-}
+.hero-wrap{max-width:1000px;margin:auto;text-align:center}
+.hero h1{font-size:34px;margin-bottom:10px}
+.hero p{opacity:.85;max-width:720px;margin:auto}
 .hero-btn{
   margin-top:24px;
-  display:flex;
-  gap:14px;
-  justify-content:center;
-  flex-wrap:wrap
+  display:flex;gap:14px;justify-content:center;flex-wrap:wrap
 }
 .btn-main{
   background:linear-gradient(90deg,#06b6d4,#22c55e);
-  color:#000;
-  padding:14px 22px;
-  border-radius:12px;
-  font-weight:bold;
-  text-decoration:none
+  color:#000;padding:14px 22px;border-radius:12px;
+  font-weight:bold;text-decoration:none
 }
 .btn-wa{
-  border:1px solid #22c55e;
-  color:#22c55e;
-  padding:14px 22px;
-  border-radius:12px;
-  font-weight:bold;
-  text-decoration:none
+  border:1px solid #22c55e;color:#22c55e;
+  padding:14px 22px;border-radius:12px;
+  font-weight:bold;text-decoration:none
 }
 
-/* ===== RATING ===== */
+/* RATING */
 .rating-wrap{
   margin-top:40px;
   display:grid;
@@ -130,40 +76,18 @@ body{
 }
 .rating-card{
   border:1px solid #1e293b;
-  border-radius:16px;
-  padding:20px
+  border-radius:16px;padding:20px
 }
-.rating-big{
-  font-size:26px;
-  font-weight:bold
-}
-.stars{
-  display:flex;
-  justify-content:center;
-  gap:4px;
-  margin:6px 0
-}
-.stars svg{
-  width:18px;
-  fill:#facc15
-}
-.rating-text{
-  opacity:.7;
-  font-size:14px
-}
+.rating-big{font-size:26px;font-weight:bold}
+.stars{display:flex;gap:4px;justify-content:center;margin:6px 0}
+.stars svg{width:18px;fill:#facc15}
+.rating-text{opacity:.7;font-size:14px}
 
-/* ===== SECTION ===== */
-.section{
-  max-width:1200px;
-  margin:auto;
-  padding:50px 16px
-}
-.section h2{
-  font-size:24px;
-  margin-bottom:20px
-}
+/* SECTION */
+.section{max-width:1200px;margin:auto;padding:50px 16px}
+.section h2{font-size:24px;margin-bottom:20px}
 
-/* ===== PRODUK ===== */
+/* PRODUK */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -171,42 +95,22 @@ body{
 }
 .card{
   border:1px solid #1e293b;
-  border-radius:16px;
-  padding:16px
+  border-radius:16px;padding:16px
 }
-.product-logo{
-  width:34px;
-  height:34px;
-  margin-bottom:8px
-}
-.product-logo svg{
-  width:100%;
-  height:100%
-}
-.price{
-  color:#22c55e;
-  font-weight:bold;
-  margin:8px 0
-}
+.product-logo{width:36px;height:36px;margin-bottom:10px}
+.product-logo svg{width:100%;height:100%}
+.price{color:#22c55e;font-weight:bold;margin:8px 0}
 .card button{
-  width:100%;
-  background:#22c55e;
-  color:#000;
-  border:none;
-  padding:10px;
-  border-radius:10px;
-  font-weight:bold;
-  cursor:pointer
+  width:100%;background:#22c55e;color:#000;
+  border:none;padding:10px;border-radius:10px;
+  font-weight:bold;cursor:pointer
 }
 
-/* ===== QRIS ===== */
+/* QRIS */
 .qris-modal{
-  position:fixed;
-  inset:0;
+  position:fixed;inset:0;
   background:rgba(0,0,0,.6);
-  display:none;
-  justify-content:center;
-  align-items:center;
+  display:none;align-items:center;justify-content:center;
   z-index:3000
 }
 .qris-box{
@@ -215,45 +119,24 @@ body{
   border-radius:16px;
   padding:24px;
   text-align:center;
-  width:90%;
-  max-width:320px
+  width:90%;max-width:320px
 }
-.qris-box img{
-  width:220px;
-  margin:16px 0
-}
+.qris-box img{width:220px;margin:16px 0}
 .qris-box button{
-  background:#22c55e;
-  color:#000;
-  border:none;
-  padding:10px 18px;
-  border-radius:10px;
-  font-weight:bold;
-  cursor:pointer
+  background:#22c55e;color:#000;
+  border:none;padding:10px 18px;
+  border-radius:10px;font-weight:bold;cursor:pointer
 }
 
-/* ===== LIVE CHAT ===== */
+/* CHAT */
 .chat-bubble{
-  position:fixed;
-  bottom:18px;
-  right:18px;
-  width:56px;
-  height:56px;
-  border-radius:50%;
+  position:fixed;bottom:18px;right:18px;
+  width:56px;height:56px;border-radius:50%;
   background:#22c55e;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:26px;
-  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;cursor:pointer;
   box-shadow:0 8px 20px rgba(34,197,94,.4);
   z-index:4000
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:600px){
-  .hero h1{font-size:28px}
-  .brand{font-size:20px}
 }
 </style>
 </head>
@@ -262,9 +145,7 @@ body{
 
 <header class="header">
   <div class="header-wrap">
-    <div class="brand">
-      <span class="zea">ZEA</span> <span>UNIVERSE</span>
-    </div>
+    <div class="brand"><span class="zea">ZEA</span> <span>UNIVERSE</span></div>
     <div class="header-icons">
       <button class="icon-btn" onclick="openQris()">💳</button>
       <div class="cart">🛒<span id="cartCount">0</span></div>
@@ -275,7 +156,7 @@ body{
 <section class="hero">
   <div class="hero-wrap">
     <h1>Langganan Digital Murah & Aman</h1>
-    <p>YouTube, Netflix, Canva, ChatGPT, Spotify, Apple Music & lainnya</p>
+    <p>YouTube • Canva • Spotify • ChatGPT • Apple Music • Google One</p>
 
     <div class="hero-btn">
       <a href="#produk" class="btn-main">Lihat Produk</a>
@@ -304,8 +185,10 @@ body{
 
 <section class="section" id="produk">
 <h2>Produk Populer</h2>
+
 <div class="grid">
 
+<!-- YOUTUBE -->
 <div class="card">
   <div class="product-logo">
     <svg viewBox="0 0 24 24" fill="#ff0000">
@@ -318,10 +201,69 @@ body{
   <button onclick="addProduct('YouTube Premium - Rp35.000')">Tambah</button>
 </div>
 
+<!-- CANVA -->
+<div class="card">
+  <div class="product-logo">
+    <svg viewBox="0 0 24 24" fill="#00c4cc">
+      <circle cx="12" cy="12" r="10"/>
+    </svg>
+  </div>
+  <h3>Canva Pro</h3>
+  <div class="price">Rp 20.000 / bulan</div>
+  <button onclick="addProduct('Canva Pro - Rp20.000')">Tambah</button>
+</div>
+
+<!-- SPOTIFY -->
+<div class="card">
+  <div class="product-logo">
+    <svg viewBox="0 0 24 24" fill="#1db954">
+      <circle cx="12" cy="12" r="10"/>
+    </svg>
+  </div>
+  <h3>Spotify Premium</h3>
+  <div class="price">Rp 25.000 / bulan</div>
+  <button onclick="addProduct('Spotify Premium - Rp25.000')">Tambah</button>
+</div>
+
+<!-- CHATGPT -->
+<div class="card">
+  <div class="product-logo">
+    <svg viewBox="0 0 24 24" fill="#22c55e">
+      <path d="M12 2a5 5 0 0 1 4.9 4h.1a5 5 0 0 1 0 10h-.1A5 5 0 1 1 12 2z"/>
+    </svg>
+  </div>
+  <h3>ChatGPT Pro</h3>
+  <div class="price">Rp 50.000 / bulan</div>
+  <button onclick="addProduct('ChatGPT Pro - Rp50.000')">Tambah</button>
+</div>
+
+<!-- APPLE MUSIC -->
+<div class="card">
+  <div class="product-logo">
+    <svg viewBox="0 0 24 24" fill="#fa2f60">
+      <path d="M16 3v11a3 3 0 1 1-2-2.8V6l-6 1.5V15a3 3 0 1 1-2-2.8V6z"/>
+    </svg>
+  </div>
+  <h3>Apple Music</h3>
+  <div class="price">Rp 25.000 / bulan</div>
+  <button onclick="addProduct('Apple Music - Rp25.000')">Tambah</button>
+</div>
+
+<!-- GOOGLE ONE -->
+<div class="card">
+  <div class="product-logo">
+    <svg viewBox="0 0 24 24" fill="#4285F4">
+      <circle cx="12" cy="12" r="10"/>
+    </svg>
+  </div>
+  <h3>Google One</h3>
+  <div class="price">Rp 20.000 / bulan</div>
+  <button onclick="addProduct('Google One - Rp20.000')">Tambah</button>
+</div>
+
 </div>
 </section>
 
-<!-- QRIS -->
 <div class="qris-modal" id="qrisModal">
   <div class="qris-box">
     <h3>Bayar via QRIS</h3>
@@ -331,7 +273,6 @@ body{
   </div>
 </div>
 
-<!-- LIVE CHAT -->
 <div class="chat-bubble" onclick="openChat()">💬</div>
 
 <footer class="section">
@@ -343,7 +284,6 @@ body{
 <script>
 let cart=0;
 let items=[];
-
 function addProduct(name){
   cart++;
   items.push(name);
@@ -354,15 +294,9 @@ function checkoutWA(){
   let text="Halo Admin ZEA UNIVERSE,%0ASaya mau order:%0A- "+items.join("%0A- ");
   window.open("https://wa.me/6281293403706?text="+text,"_blank");
 }
-function openQris(){
-  document.getElementById("qrisModal").style.display="flex";
-}
-function closeQris(){
-  document.getElementById("qrisModal").style.display="none";
-}
-function openChat(){
-  window.open("https://wa.me/6281293403706","_blank");
-}
+function openQris(){document.getElementById("qrisModal").style.display="flex"}
+function closeQris(){document.getElementById("qrisModal").style.display="none"}
+function openChat(){window.open("https://wa.me/6281293403706","_blank")}
 </script>
 
 </body>
