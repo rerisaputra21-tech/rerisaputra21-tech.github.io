@@ -6,166 +6,174 @@
 <title>ZEA UNIVERSE</title>
 
 <style>
+/* ===== RESET ===== */
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:#020617;color:#e5e7eb}
+body{background:#020617;color:#e5e7eb;transition:.3s}
+body.light{background:#f8fafc;color:#020617}
 
-/* ================= HEADER ================= */
-.header{
-  position:sticky;top:0;z-index:1000;
+/* ===== HEADER ===== */
+.header-premium{
+  position:sticky;top:0;z-index:999;
   background:rgba(2,6,23,.85);
   backdrop-filter:blur(12px);
-  border-bottom:1px solid #1e293b
+  border-bottom:1px solid #1e293b;
 }
+body.light .header-premium{background:#fff}
 .header-wrap{
   max-width:1200px;margin:auto;
-  padding:16px 20px;
-  display:flex;justify-content:space-between;align-items:center
+  padding:14px 20px;
+  display:flex;align-items:center;justify-content:space-between;
 }
 .brand{font-size:22px;font-weight:900}
 .brand .zea{
   background:linear-gradient(90deg,#06b6d4,#22c55e);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 .brand span{
   background:linear-gradient(90deg,#22c55e,#a855f7);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
-.header-icons{display:flex;gap:12px;align-items:center}
+.menu{display:flex;gap:18px}
+.menu a{color:inherit;text-decoration:none;font-size:14px;opacity:.8}
+.menu a:hover{opacity:1}
+.header-icons{display:flex;gap:10px;align-items:center}
 .icon-btn{
   width:38px;height:38px;border-radius:12px;
   border:1px solid #1e293b;
-  background:rgba(255,255,255,.05);
-  color:#fff;font-size:18px;cursor:pointer
+  background:transparent;color:inherit;
+  cursor:pointer;font-size:16px;
 }
-.cart{position:relative;font-size:22px}
+.cart{position:relative;font-size:22px;cursor:pointer}
 .cart span{
   position:absolute;top:-6px;right:-8px;
   background:#22c55e;color:#000;
-  font-size:11px;padding:2px 6px;border-radius:50%
+  font-size:11px;padding:2px 6px;border-radius:50%;
 }
 
-/* ================= HERO ================= */
+/* ===== HERO ===== */
 .hero{
-  padding:60px 16px;
-  background:radial-gradient(circle at top,#0f172a,#020617)
+  padding:70px 20px;
+  background:radial-gradient(circle at top,#0f172a,#020617);
 }
 .hero-wrap{max-width:1000px;margin:auto;text-align:center}
-.hero h1{font-size:34px;margin-bottom:10px}
+.hero h1{font-size:36px;margin-bottom:12px}
 .hero p{opacity:.85;max-width:720px;margin:auto}
-.hero-btn{
-  margin-top:24px;
-  display:flex;gap:14px;justify-content:center;flex-wrap:wrap
+.hero-btn{margin-top:26px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn-main,.btn-wa{
+  padding:14px 24px;border-radius:12px;
+  font-weight:bold;text-decoration:none;
 }
-.btn-main{
-  background:linear-gradient(90deg,#06b6d4,#22c55e);
-  color:#000;padding:14px 22px;border-radius:12px;
-  font-weight:bold;text-decoration:none
-}
-.btn-wa{
-  border:1px solid #22c55e;color:#22c55e;
-  padding:14px 22px;border-radius:12px;
-  font-weight:bold;text-decoration:none
-}
+.btn-main{background:linear-gradient(90deg,#06b6d4,#22c55e);color:#000}
+.btn-wa{border:1px solid #22c55e;color:#22c55e}
 
-/* ================= RATING STAT ================= */
+/* ===== RATING ===== */
 .rating-wrap{
   margin-top:40px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px
+  gap:18px;
 }
 .rating-card{
   border:1px solid #1e293b;
-  border-radius:16px;padding:20px;text-align:center
+  border-radius:16px;padding:20px;
 }
-.rating-big{font-size:26px;font-weight:bold}
-.stars{display:flex;gap:4px;justify-content:center;margin:6px 0}
+.rating-big{font-size:28px;font-weight:bold}
+.stars{display:flex;gap:4px;margin:6px 0}
 .stars svg{width:18px;fill:#facc15}
 .rating-text{opacity:.7;font-size:14px}
 
-/* ================= SECTION ================= */
-.section{max-width:1200px;margin:auto;padding:50px 16px}
-.section h2{font-size:24px;margin-bottom:20px}
+/* ===== SECTION ===== */
+.section{max-width:1200px;margin:auto;padding:60px 20px}
+.section h2{font-size:26px;margin-bottom:24px}
 
-/* ================= PRODUK ================= */
+/* ===== PRODUK ===== */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:16px
+  gap:18px;
 }
 .card{
   border:1px solid #1e293b;
-  border-radius:16px;padding:16px
+  border-radius:16px;padding:18px;
 }
-.product-logo{width:36px;height:36px;margin-bottom:10px}
-.product-logo svg{width:100%;height:100%}
-.price{color:#22c55e;font-weight:bold;margin:8px 0}
+.card h3{display:flex;align-items:center;gap:8px}
+.card svg{width:22px}
+.price{color:#22c55e;font-weight:bold;margin:10px 0}
 .card button{
-  width:100%;background:#22c55e;color:#000;
-  border:none;padding:10px;border-radius:10px;
-  font-weight:bold;cursor:pointer
+  width:100%;padding:10px;border-radius:10px;
+  background:#22c55e;color:#000;
+  border:none;font-weight:bold;cursor:pointer;
 }
 
-/* ================= REVIEW ================= */
-.review-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:16px
+/* ===== CART PANEL ===== */
+.cart-panel{
+  position:fixed;top:0;right:-100%;
+  width:320px;height:100%;
+  background:#020617;
+  border-left:1px solid #1e293b;
+  padding:20px;
+  transition:.3s;z-index:9999;
+}
+.cart-panel.open{right:0}
+.cart-panel h3{margin-bottom:12px}
+.cart-list{font-size:14px;opacity:.9}
+.checkout{
+  margin-top:14px;
+  width:100%;padding:12px;
+  background:#22c55e;color:#000;
+  border:none;border-radius:10px;
+  font-weight:bold;cursor:pointer;
 }
 
-/* ================= PAYMENT ================= */
-.pay-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-  gap:14px;text-align:center
-}
-.pay-card{
-  border:1px solid #1e293b;
-  border-radius:14px;padding:14px
-}
-
-/* ================= QRIS ================= */
-.qris-modal{
+/* ===== QRIS MODAL ===== */
+.modal{
   position:fixed;inset:0;
   background:rgba(0,0,0,.6);
   display:none;align-items:center;justify-content:center;
-  z-index:3000
 }
-.qris-box{
+.modal.active{display:flex}
+.modal-box{
   background:#020617;
-  border:1px solid #1e293b;
-  border-radius:16px;
-  padding:24px;text-align:center;
-  width:90%;max-width:320px
+  padding:24px;border-radius:16px;
+  text-align:center;border:1px solid #1e293b;
 }
-.qris-box img{width:220px;margin:16px 0}
 
-/* ================= CHAT ================= */
-.chat-bubble{
-  position:fixed;bottom:18px;right:18px;
-  width:56px;height:56px;border-radius:50%;
-  background:#22c55e;
+/* ===== LIVE CHAT ===== */
+.chat{
+  position:fixed;bottom:20px;right:20px;
+  background:linear-gradient(90deg,#06b6d4,#22c55e);
+  width:56px;height:56px;
+  border-radius:50%;
   display:flex;align-items:center;justify-content:center;
-  font-size:26px;cursor:pointer;
-  box-shadow:0 8px 20px rgba(34,197,94,.4);
-  z-index:4000
+  font-size:24px;color:#000;cursor:pointer;
 }
 
-/* ================= MOBILE ================= */
-@media(max-width:600px){
-  .hero h1{font-size:28px}
+/* ===== FOOTER ===== */
+footer{border-top:1px solid #1e293b;padding:40px 20px}
+.small{opacity:.6;font-size:13px}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .menu{display:none}
 }
 </style>
 </head>
 
 <body>
 
-<header class="header">
+<header class="header-premium">
   <div class="header-wrap">
     <div class="brand"><span class="zea">ZEA</span> <span>UNIVERSE</span></div>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#produk">Produk</a>
+      <a href="#faq">FAQ</a>
+    </nav>
     <div class="header-icons">
-      <button class="icon-btn" onclick="openQris()">💳</button>
-      <div class="cart">🛒<span id="cartCount">0</span></div>
+      <button class="icon-btn" onclick="toggleTheme()">🌓</button>
+      <div class="cart" onclick="toggleCart()">🛒<span id="cartCount">0</span></div>
     </div>
   </div>
 </header>
@@ -173,15 +181,17 @@ body{background:#020617;color:#e5e7eb}
 <section class="hero">
   <div class="hero-wrap">
     <h1>Langganan Digital Murah & Aman</h1>
-    <p>YouTube • Netflix • Canva • Spotify • ChatGPT • Google One • dll</p>
-
+    <p>YouTube, Netflix, Spotify, Canva, ChatGPT, Apple Music & lainnya.</p>
     <div class="hero-btn">
       <a href="#produk" class="btn-main">Lihat Produk</a>
-      <a href="#" onclick="checkoutWA()" class="btn-wa">Checkout WhatsApp</a>
+      <a href="#" class="btn-wa">Hubungi Admin</a>
     </div>
 
     <div class="rating-wrap">
-      <div class="rating-card"><div class="rating-big">2.500+</div><div class="rating-text">Transaksi</div></div>
+      <div class="rating-card">
+        <div class="rating-big">1.000+</div>
+        <div class="rating-text">Pesanan terselesaikan</div>
+      </div>
       <div class="rating-card">
         <div class="rating-big">4.9 / 5</div>
         <div class="stars">
@@ -191,80 +201,64 @@ body{background:#020617;color:#e5e7eb}
           <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.27l7.19-.61L12 2l2.81 6.66 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.27l7.19-.61L12 2l2.81 6.66 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
         </div>
-        <div class="rating-text">Kepuasan pelanggan</div>
+        <div class="rating-text">Rina – Makassar</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= PRODUK 10 ITEM ================= -->
 <section class="section" id="produk">
-<h2>Produk Populer</h2>
-<div class="grid">
-
-<div class="card"><h3>YouTube Premium</h3><div class="price">Rp 35.000</div><button onclick="addProduct('YouTube')">Tambah</button></div>
-<div class="card"><h3>Netflix</h3><div class="price">Rp 30.000</div><button onclick="addProduct('Netflix')">Tambah</button></div>
-<div class="card"><h3>Spotify</h3><div class="price">Rp 25.000</div><button onclick="addProduct('Spotify')">Tambah</button></div>
-<div class="card"><h3>Apple Music</h3><div class="price">Rp 25.000</div><button onclick="addProduct('Apple Music')">Tambah</button></div>
-<div class="card"><h3>Canva Pro</h3><div class="price">Rp 20.000</div><button onclick="addProduct('Canva')">Tambah</button></div>
-<div class="card"><h3>ChatGPT Pro</h3><div class="price">Rp 50.000</div><button onclick="addProduct('ChatGPT')">Tambah</button></div>
-<div class="card"><h3>Google One</h3><div class="price">Rp 20.000</div><button onclick="addProduct('Google One')">Tambah</button></div>
-<div class="card"><h3>Disney+</h3><div class="price">Rp 30.000</div><button onclick="addProduct('Disney+')">Tambah</button></div>
-<div class="card"><h3>Prime Video</h3><div class="price">Rp 30.000</div><button onclick="addProduct('Prime Video')">Tambah</button></div>
-<div class="card"><h3>CapCut Pro</h3><div class="price">Rp 25.000</div><button onclick="addProduct('CapCut')">Tambah</button></div>
-
-</div>
+<h2>Produk Digital</h2>
+<div class="grid" id="productGrid"></div>
 </section>
 
-<!-- ================= REVIEW ================= -->
-<section class="section">
-<h2>Apa Kata Mereka?</h2>
-<div class="review-grid">
-  <div class="card"><p>“Admin cepat, YouTube langsung aktif.”</p><small>- Andi, Jakarta</small></div>
-  <div class="card"><p>“Spotify family aman.”</p><small>- Rina, Makassar</small></div>
-  <div class="card"><p>“Canva Pro kepake banget.”</p><small>- Sari, Jogja</small></div>
-  <div class="card"><p>“ChatGPT lancar buat kerja.”</p><small>- Dimas, Surabaya</small></div>
-</div>
-</section>
+<footer id="faq">
+  <p><b>Pembayaran:</b> BCA • Aladin • QRIS • ShopeePay • GoPay</p>
+  <p class="small">© 2026 ZEA UNIVERSE</p>
+</footer>
 
-<!-- ================= PAYMENT ================= -->
-<section class="section">
-<h2>Metode Pembayaran</h2>
-<div class="pay-grid">
-  <div class="pay-card">BCA</div>
-  <div class="pay-card">Aladin</div>
-  <div class="pay-card">QRIS</div>
-  <div class="pay-card">ShopeePay</div>
-  <div class="pay-card">GoPay</div>
+<div class="cart-panel" id="cartPanel">
+  <h3>Keranjang</h3>
+  <div class="cart-list" id="cartList"></div>
+  <button class="checkout" onclick="openQris()">Checkout QRIS</button>
 </div>
-</section>
 
-<div class="qris-modal" id="qrisModal">
-  <div class="qris-box">
+<div class="modal" id="qrisModal">
+  <div class="modal-box">
     <h3>Bayar via QRIS</h3>
-    <img src="https://dummyimage.com/300x300/000/fff&text=QRIS+ZEA+UNIVERSE">
-    <button onclick="closeQris()">Tutup</button>
+    <p>(QR Code di sini)</p>
+    <button class="checkout" onclick="closeQris()">Tutup</button>
   </div>
 </div>
 
-<div class="chat-bubble" onclick="openChat()">💬</div>
-
-<footer class="section">
-  <h3>ZEA UNIVERSE</h3>
-  <p>WhatsApp: 0812-9340-3706</p>
-  <p style="opacity:.6;font-size:13px">© 2026 ZEA UNIVERSE</p>
-</footer>
+<div class="chat">💬</div>
 
 <script>
-let cart=0,items=[];
-function addProduct(n){cart++;items.push(n);cartCount.innerText=cart}
-function checkoutWA(){
-  if(!items.length)return alert("Keranjang kosong");
-  window.open("https://wa.me/6281293403706?text=Order:%0A- "+items.join("%0A- "));
+const products=[
+"YouTube","Netflix","Spotify","Apple Music","Canva","ChatGPT",
+"Google One","CapCut","Zoom","Microsoft 365"
+];
+let cart=[];
+
+const grid=document.getElementById("productGrid");
+products.forEach(p=>{
+  grid.innerHTML+=`
+  <div class="card">
+    <h3>${p}</h3>
+    <div class="price">Mulai Rp 25.000</div>
+    <button onclick="addCart('${p}')">Tambah</button>
+  </div>`;
+});
+
+function addCart(p){
+  cart.push(p);
+  document.getElementById("cartCount").innerText=cart.length;
+  document.getElementById("cartList").innerHTML=cart.join("<br>");
 }
-function openQris(){qrisModal.style.display="flex"}
-function closeQris(){qrisModal.style.display="none"}
-function openChat(){window.open("https://wa.me/6281293403706")}
+function toggleCart(){document.getElementById("cartPanel").classList.toggle("open")}
+function openQris(){document.getElementById("qrisModal").classList.add("active")}
+function closeQris(){document.getElementById("qrisModal").classList.remove("active")}
+function toggleTheme(){document.body.classList.toggle("light")}
 </script>
 
 </body>
