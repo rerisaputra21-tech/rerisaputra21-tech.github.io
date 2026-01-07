@@ -9,9 +9,9 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 body{background:#020617;color:#e5e7eb}
 
-/* HEADER */
+/* ================= HEADER ================= */
 .header{
-  position:sticky;top:0;z-index:999;
+  position:sticky;top:0;z-index:1000;
   background:rgba(2,6,23,.85);
   backdrop-filter:blur(12px);
   border-bottom:1px solid #1e293b
@@ -19,7 +19,7 @@ body{background:#020617;color:#e5e7eb}
 .header-wrap{
   max-width:1200px;margin:auto;
   padding:16px 20px;
-  display:flex;align-items:center;justify-content:space-between
+  display:flex;justify-content:space-between;align-items:center
 }
 .brand{font-size:22px;font-weight:900}
 .brand .zea{
@@ -44,7 +44,7 @@ body{background:#020617;color:#e5e7eb}
   font-size:11px;padding:2px 6px;border-radius:50%
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
   padding:60px 16px;
   background:radial-gradient(circle at top,#0f172a,#020617)
@@ -67,7 +67,7 @@ body{background:#020617;color:#e5e7eb}
   font-weight:bold;text-decoration:none
 }
 
-/* RATING */
+/* ================= RATING STAT ================= */
 .rating-wrap{
   margin-top:40px;
   display:grid;
@@ -76,18 +76,18 @@ body{background:#020617;color:#e5e7eb}
 }
 .rating-card{
   border:1px solid #1e293b;
-  border-radius:16px;padding:20px
+  border-radius:16px;padding:20px;text-align:center
 }
 .rating-big{font-size:26px;font-weight:bold}
 .stars{display:flex;gap:4px;justify-content:center;margin:6px 0}
 .stars svg{width:18px;fill:#facc15}
 .rating-text{opacity:.7;font-size:14px}
 
-/* SECTION */
+/* ================= SECTION ================= */
 .section{max-width:1200px;margin:auto;padding:50px 16px}
 .section h2{font-size:24px;margin-bottom:20px}
 
-/* PRODUK */
+/* ================= PRODUK ================= */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -106,7 +106,25 @@ body{background:#020617;color:#e5e7eb}
   font-weight:bold;cursor:pointer
 }
 
-/* QRIS */
+/* ================= REVIEW ================= */
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px
+}
+
+/* ================= PAYMENT ================= */
+.pay-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:14px;text-align:center
+}
+.pay-card{
+  border:1px solid #1e293b;
+  border-radius:14px;padding:14px
+}
+
+/* ================= QRIS ================= */
 .qris-modal{
   position:fixed;inset:0;
   background:rgba(0,0,0,.6);
@@ -117,18 +135,12 @@ body{background:#020617;color:#e5e7eb}
   background:#020617;
   border:1px solid #1e293b;
   border-radius:16px;
-  padding:24px;
-  text-align:center;
+  padding:24px;text-align:center;
   width:90%;max-width:320px
 }
 .qris-box img{width:220px;margin:16px 0}
-.qris-box button{
-  background:#22c55e;color:#000;
-  border:none;padding:10px 18px;
-  border-radius:10px;font-weight:bold;cursor:pointer
-}
 
-/* CHAT */
+/* ================= CHAT ================= */
 .chat-bubble{
   position:fixed;bottom:18px;right:18px;
   width:56px;height:56px;border-radius:50%;
@@ -137,6 +149,11 @@ body{background:#020617;color:#e5e7eb}
   font-size:26px;cursor:pointer;
   box-shadow:0 8px 20px rgba(34,197,94,.4);
   z-index:4000
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:600px){
+  .hero h1{font-size:28px}
 }
 </style>
 </head>
@@ -156,7 +173,7 @@ body{background:#020617;color:#e5e7eb}
 <section class="hero">
   <div class="hero-wrap">
     <h1>Langganan Digital Murah & Aman</h1>
-    <p>YouTube • Canva • Spotify • ChatGPT • Apple Music • Google One</p>
+    <p>YouTube • Netflix • Canva • Spotify • ChatGPT • Google One • dll</p>
 
     <div class="hero-btn">
       <a href="#produk" class="btn-main">Lihat Produk</a>
@@ -164,10 +181,7 @@ body{background:#020617;color:#e5e7eb}
     </div>
 
     <div class="rating-wrap">
-      <div class="rating-card">
-        <div class="rating-big">1.000+</div>
-        <div class="rating-text">Pesanan selesai</div>
-      </div>
+      <div class="rating-card"><div class="rating-big">2.500+</div><div class="rating-text">Transaksi</div></div>
       <div class="rating-card">
         <div class="rating-big">4.9 / 5</div>
         <div class="stars">
@@ -183,84 +197,45 @@ body{background:#020617;color:#e5e7eb}
   </div>
 </section>
 
+<!-- ================= PRODUK 10 ITEM ================= -->
 <section class="section" id="produk">
 <h2>Produk Populer</h2>
-
 <div class="grid">
 
-<!-- YOUTUBE -->
-<div class="card">
-  <div class="product-logo">
-    <svg viewBox="0 0 24 24" fill="#ff0000">
-      <path d="M23.5 6.2s-.2-1.6-.8-2.3c-.8-.8-1.7-.8-2.1-.9C17.6 2.8 12 2.8 12 2.8s-5.6 0-8.6.2c-.4.1-1.3.1-2.1.9-.6.7-.8 2.3-.8 2.3S0 8.1 0 10v2c0 1.9.2 3.8.2 3.8s.2 1.6.8 2.3c.8.8 1.9.8 2.4.9 1.8.2 7.6.2 7.6.2s5.6 0 8.6-.2c.4-.1 1.3-.1 2.1-.9.6-.7.8-2.3.8-2.3s.2-1.9.2-3.8v-2c0-1.9-.2-3.8-.2-3.8z"/>
-      <path fill="#fff" d="M9.6 14.6l5.8-3.1-5.8-3.1z"/>
-    </svg>
-  </div>
-  <h3>YouTube Premium</h3>
-  <div class="price">Rp 35.000 / bulan</div>
-  <button onclick="addProduct('YouTube Premium - Rp35.000')">Tambah</button>
-</div>
+<div class="card"><h3>YouTube Premium</h3><div class="price">Rp 35.000</div><button onclick="addProduct('YouTube')">Tambah</button></div>
+<div class="card"><h3>Netflix</h3><div class="price">Rp 30.000</div><button onclick="addProduct('Netflix')">Tambah</button></div>
+<div class="card"><h3>Spotify</h3><div class="price">Rp 25.000</div><button onclick="addProduct('Spotify')">Tambah</button></div>
+<div class="card"><h3>Apple Music</h3><div class="price">Rp 25.000</div><button onclick="addProduct('Apple Music')">Tambah</button></div>
+<div class="card"><h3>Canva Pro</h3><div class="price">Rp 20.000</div><button onclick="addProduct('Canva')">Tambah</button></div>
+<div class="card"><h3>ChatGPT Pro</h3><div class="price">Rp 50.000</div><button onclick="addProduct('ChatGPT')">Tambah</button></div>
+<div class="card"><h3>Google One</h3><div class="price">Rp 20.000</div><button onclick="addProduct('Google One')">Tambah</button></div>
+<div class="card"><h3>Disney+</h3><div class="price">Rp 30.000</div><button onclick="addProduct('Disney+')">Tambah</button></div>
+<div class="card"><h3>Prime Video</h3><div class="price">Rp 30.000</div><button onclick="addProduct('Prime Video')">Tambah</button></div>
+<div class="card"><h3>CapCut Pro</h3><div class="price">Rp 25.000</div><button onclick="addProduct('CapCut')">Tambah</button></div>
 
-<!-- CANVA -->
-<div class="card">
-  <div class="product-logo">
-    <svg viewBox="0 0 24 24" fill="#00c4cc">
-      <circle cx="12" cy="12" r="10"/>
-    </svg>
-  </div>
-  <h3>Canva Pro</h3>
-  <div class="price">Rp 20.000 / bulan</div>
-  <button onclick="addProduct('Canva Pro - Rp20.000')">Tambah</button>
 </div>
+</section>
 
-<!-- SPOTIFY -->
-<div class="card">
-  <div class="product-logo">
-    <svg viewBox="0 0 24 24" fill="#1db954">
-      <circle cx="12" cy="12" r="10"/>
-    </svg>
-  </div>
-  <h3>Spotify Premium</h3>
-  <div class="price">Rp 25.000 / bulan</div>
-  <button onclick="addProduct('Spotify Premium - Rp25.000')">Tambah</button>
+<!-- ================= REVIEW ================= -->
+<section class="section">
+<h2>Apa Kata Mereka?</h2>
+<div class="review-grid">
+  <div class="card"><p>“Admin cepat, YouTube langsung aktif.”</p><small>- Andi, Jakarta</small></div>
+  <div class="card"><p>“Spotify family aman.”</p><small>- Rina, Makassar</small></div>
+  <div class="card"><p>“Canva Pro kepake banget.”</p><small>- Sari, Jogja</small></div>
+  <div class="card"><p>“ChatGPT lancar buat kerja.”</p><small>- Dimas, Surabaya</small></div>
 </div>
+</section>
 
-<!-- CHATGPT -->
-<div class="card">
-  <div class="product-logo">
-    <svg viewBox="0 0 24 24" fill="#22c55e">
-      <path d="M12 2a5 5 0 0 1 4.9 4h.1a5 5 0 0 1 0 10h-.1A5 5 0 1 1 12 2z"/>
-    </svg>
-  </div>
-  <h3>ChatGPT Pro</h3>
-  <div class="price">Rp 50.000 / bulan</div>
-  <button onclick="addProduct('ChatGPT Pro - Rp50.000')">Tambah</button>
-</div>
-
-<!-- APPLE MUSIC -->
-<div class="card">
-  <div class="product-logo">
-    <svg viewBox="0 0 24 24" fill="#fa2f60">
-      <path d="M16 3v11a3 3 0 1 1-2-2.8V6l-6 1.5V15a3 3 0 1 1-2-2.8V6z"/>
-    </svg>
-  </div>
-  <h3>Apple Music</h3>
-  <div class="price">Rp 25.000 / bulan</div>
-  <button onclick="addProduct('Apple Music - Rp25.000')">Tambah</button>
-</div>
-
-<!-- GOOGLE ONE -->
-<div class="card">
-  <div class="product-logo">
-    <svg viewBox="0 0 24 24" fill="#4285F4">
-      <circle cx="12" cy="12" r="10"/>
-    </svg>
-  </div>
-  <h3>Google One</h3>
-  <div class="price">Rp 20.000 / bulan</div>
-  <button onclick="addProduct('Google One - Rp20.000')">Tambah</button>
-</div>
-
+<!-- ================= PAYMENT ================= -->
+<section class="section">
+<h2>Metode Pembayaran</h2>
+<div class="pay-grid">
+  <div class="pay-card">BCA</div>
+  <div class="pay-card">Aladin</div>
+  <div class="pay-card">QRIS</div>
+  <div class="pay-card">ShopeePay</div>
+  <div class="pay-card">GoPay</div>
 </div>
 </section>
 
@@ -268,7 +243,6 @@ body{background:#020617;color:#e5e7eb}
   <div class="qris-box">
     <h3>Bayar via QRIS</h3>
     <img src="https://dummyimage.com/300x300/000/fff&text=QRIS+ZEA+UNIVERSE">
-    <p>Scan QR untuk bayar</p>
     <button onclick="closeQris()">Tutup</button>
   </div>
 </div>
@@ -278,25 +252,19 @@ body{background:#020617;color:#e5e7eb}
 <footer class="section">
   <h3>ZEA UNIVERSE</h3>
   <p>WhatsApp: 0812-9340-3706</p>
-  <p class="small">© 2026 ZEA UNIVERSE</p>
+  <p style="opacity:.6;font-size:13px">© 2026 ZEA UNIVERSE</p>
 </footer>
 
 <script>
-let cart=0;
-let items=[];
-function addProduct(name){
-  cart++;
-  items.push(name);
-  document.getElementById("cartCount").innerText=cart;
-}
+let cart=0,items=[];
+function addProduct(n){cart++;items.push(n);cartCount.innerText=cart}
 function checkoutWA(){
-  if(items.length===0){alert("Keranjang kosong");return}
-  let text="Halo Admin ZEA UNIVERSE,%0ASaya mau order:%0A- "+items.join("%0A- ");
-  window.open("https://wa.me/6281293403706?text="+text,"_blank");
+  if(!items.length)return alert("Keranjang kosong");
+  window.open("https://wa.me/6281293403706?text=Order:%0A- "+items.join("%0A- "));
 }
-function openQris(){document.getElementById("qrisModal").style.display="flex"}
-function closeQris(){document.getElementById("qrisModal").style.display="none"}
-function openChat(){window.open("https://wa.me/6281293403706","_blank")}
+function openQris(){qrisModal.style.display="flex"}
+function closeQris(){qrisModal.style.display="none"}
+function openChat(){window.open("https://wa.me/6281293403706")}
 </script>
 
 </body>
