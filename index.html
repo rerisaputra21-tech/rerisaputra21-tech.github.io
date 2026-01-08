@@ -6,76 +6,74 @@
 <title>ZEA UNIVERSE</title>
 
 <style>
-:root{
-  --bg:#020617;
-  --card:#020617;
-  --text:#e5e7eb;
-  --border:#1e293b;
-  --accent:#22c55e;
-}
-body.light{
-  --bg:#f8fafc;
-  --card:#ffffff;
-  --text:#020617;
-}
+/* ===== RESET ===== */
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:var(--bg);color:var(--text);}
+body{background:#020617;color:#e5e7eb;transition:.3s}
+body.light{background:#f8fafc;color:#020617}
+a{text-decoration:none;color:inherit}
 
 /* ===== HEADER ===== */
 header{
-  position:sticky;top:0;z-index:999;
+  position:sticky;top:0;z-index:1000;
   background:rgba(2,6,23,.9);
   backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
+  border-bottom:1px solid #1e293b;
 }
 .nav{
   max-width:1200px;margin:auto;
   padding:14px 20px;
   display:flex;align-items:center;justify-content:space-between;
 }
-.brand{
-  font-size:22px;font-weight:900;
-  background:linear-gradient(90deg,#06b6d4,#22c55e,#a855f7);
+.brand{font-size:22px;font-weight:900}
+.brand span{
+  background:linear-gradient(90deg,#22c55e,#06b6d4,#a855f7);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
-.menu a{
-  margin:0 12px;
-  color:var(--text);
-  text-decoration:none;
-  font-size:14px;
-}
-.icons{display:flex;gap:12px;align-items:center}
-.icon-btn{
-  background:none;border:1px solid var(--border);
-  padding:6px 10px;border-radius:10px;
-  color:var(--text);cursor:pointer;
-}
-.cart{position:relative;font-size:22px;cursor:pointer}
-.cart span{
+.menu{display:flex;gap:20px;font-size:14px}
+.menu a{opacity:.85}
+.menu a:hover{opacity:1}
+
+.header-right{display:flex;gap:14px;align-items:center}
+.toggle{cursor:pointer}
+.cart-icon{cursor:pointer;position:relative;font-size:20px}
+.cart-icon span{
   position:absolute;top:-6px;right:-8px;
-  background:var(--accent);color:#000;
-  padding:2px 6px;font-size:11px;border-radius:50%;
+  background:#22c55e;color:#000;
+  font-size:11px;padding:2px 6px;border-radius:50%;
 }
 
 /* ===== HERO ===== */
 .hero{
-  padding:70px 20px 60px;
+  padding:80px 20px 60px;
   background:radial-gradient(circle at top,#0f172a,#020617);
 }
 .hero-wrap{max-width:1000px;margin:auto;text-align:center}
-.hero h1{font-size:36px;margin-bottom:12px}
-.hero p{opacity:.85}
-.hero-btn{
-  margin-top:26px;
-  display:flex;gap:14px;justify-content:center;flex-wrap:wrap
-}
-.btn{
-  padding:14px 24px;border-radius:12px;
-  font-weight:bold;text-decoration:none;cursor:pointer
+.hero h1{font-size:36px;margin-bottom:10px}
+.hero p{opacity:.8}
+.hero-btn{margin-top:22px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-main,.btn-wa{
+  padding:14px 24px;border-radius:12px;font-weight:bold
 }
 .btn-main{background:linear-gradient(90deg,#06b6d4,#22c55e);color:#000}
-.btn-wa{border:1px solid var(--accent);color:var(--accent)}
+.btn-wa{border:1px solid #22c55e;color:#22c55e}
+
+/* ===== RATING TOP ===== */
+.rating-top{
+  margin-top:36px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+.rate-card{
+  border:1px solid #1e293b;
+  border-radius:16px;
+  padding:18px;
+  background:#020617;
+}
+.rate-big{font-size:28px;font-weight:bold}
+.stars{display:flex;gap:4px;margin:6px 0}
+.stars svg{width:18px;fill:#facc15}
 
 /* ===== SECTION ===== */
 .section{max-width:1200px;margin:auto;padding:60px 20px}
@@ -88,16 +86,15 @@ header{
   gap:18px;
 }
 .card{
-  background:var(--card);
-  border:1px solid var(--border);
+  border:1px solid #1e293b;
   border-radius:16px;
   padding:18px;
 }
-.price{color:var(--accent);margin:8px 0;font-weight:bold}
+.card h3{display:flex;align-items:center;gap:8px}
+.price{color:#22c55e;font-weight:bold;margin:10px 0}
 .card button{
   width:100%;
-  background:var(--accent);
-  color:#000;
+  background:#22c55e;
   border:none;
   padding:10px;
   border-radius:10px;
@@ -105,49 +102,68 @@ header{
   cursor:pointer;
 }
 
-/* ===== RATING ===== */
-.rating{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
-}
-.stars{color:#facc15;font-size:18px}
-
 /* ===== CART DRAWER ===== */
-#cartDrawer{
-  position:fixed;right:-100%;top:0;
-  width:320px;height:100%;
-  background:var(--bg);
-  border-left:1px solid var(--border);
+.cart-drawer{
+  position:fixed;top:0;right:-100%;
+  width:85%;max-width:360px;height:100%;
+  background:#020617;
+  border-left:1px solid #1e293b;
   padding:20px;
-  transition:.3s;z-index:9999;
+  z-index:2000;
+  transition:.4s cubic-bezier(.4,0,.2,1);
 }
-#cartDrawer ul{margin:10px 0}
+.cart-drawer.open{right:0}
+.cart-back{
+  background:none;border:none;
+  color:#22c55e;
+  cursor:pointer;
+  margin-bottom:12px;
+}
+.cart-list{list-style:none;margin-bottom:14px}
+.cart-list li{
+  display:flex;justify-content:space-between;
+  font-size:14px;margin-bottom:6px
+}
+.remove{cursor:pointer;color:#ef4444}
 
 /* ===== QRIS MODAL ===== */
-#qrisModal{
-  display:none;
+.modal{
   position:fixed;inset:0;
   background:rgba(0,0,0,.6);
-  z-index:9999;
+  display:none;
   align-items:center;justify-content:center;
+  z-index:3000;
+}
+.modal.open{display:flex}
+.modal-box{
+  background:#020617;
+  padding:24px;border-radius:16px;
+  text-align:center;
 }
 
-/* ===== CHAT ===== */
-.chat-bubble{
-  position:fixed;
-  bottom:20px;right:20px;
-  width:56px;height:56px;
-  border-radius:50%;
-  background:linear-gradient(90deg,#06b6d4,#22c55e);
-  display:flex;align-items:center;justify-content:center;
-  font-size:22px;color:#000;cursor:pointer;
+/* ===== TESTIMONI ===== */
+.testi{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+}
+.testi-card{
+  border:1px solid #1e293b;
+  border-radius:14px;
+  padding:16px;
 }
 
 /* ===== FOOTER ===== */
-footer{
-  border-top:1px solid var(--border);
-  padding:40px 20px;
+footer{border-top:1px solid #1e293b;padding:40px 20px}
+
+/* ===== LIVE CHAT ===== */
+.chat{
+  position:fixed;bottom:20px;right:20px;
+  width:56px;height:56px;
+  background:#22c55e;color:#000;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;cursor:pointer;
 }
 
 /* ===== MOBILE ===== */
@@ -159,127 +175,136 @@ footer{
 
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="nav">
-    <div class="brand">ZEA UNIVERSE</div>
+    <div class="brand">ZEA <span>UNIVERSE</span></div>
     <nav class="menu">
       <a href="#">Home</a>
       <a href="#produk">Produk</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <div class="icons">
-      <button class="icon-btn" onclick="toggleTheme()">🌓</button>
-      <div class="cart" onclick="openCart()">🛒<span id="cartCount">0</span></div>
+    <div class="header-right">
+      <div class="toggle" onclick="toggleTheme()">🌓</div>
+      <div class="cart-icon" onclick="openCart()">🛒<span id="cartCount">0</span></div>
     </div>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-wrap">
     <h1>Langganan Digital Murah & Aman</h1>
-    <p>YouTube, Netflix, Spotify, Canva, ChatGPT & lainnya</p>
+    <p>YouTube · Netflix · Spotify · Apple Music · Canva · ChatGPT · Google One · dll</p>
     <div class="hero-btn">
-      <a href="#produk" class="btn btn-main">Lihat Produk</a>
-      <a onclick="checkoutWA()" class="btn btn-wa">Checkout WhatsApp</a>
+      <a href="#produk" class="btn-main">Lihat Produk</a>
+      <a id="waHero" class="btn-wa">Checkout WhatsApp</a>
+    </div>
+
+    <div class="rating-top">
+      <div class="rate-card">
+        <div class="rate-big">2.500+</div>
+        <small>Transaksi</small>
+      </div>
+      <div class="rate-card">
+        <div class="rate-big">4.9 / 5</div>
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.4 4.7 1.6 7L12 17l-6.2 3.7 1.6-7L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.4 4.7 1.6 7L12 17l-6.2 3.7 1.6-7L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.4 4.7 1.6 7L12 17l-6.2 3.7 1.6-7L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.4 4.7 1.6 7L12 17l-6.2 3.7 1.6-7L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.4 4.7 1.6 7L12 17l-6.2 3.7 1.6-7L2 9.6 9 9z"/></svg>
+        </div>
+        <small>Kepuasan pelanggan</small>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PRODUK -->
 <section class="section" id="produk">
-<h2>Produk Digital</h2>
-<div class="grid">
-  <div class="card"><h3>YouTube</h3><div class="price">Rp25.000</div><button onclick="addCart('YouTube')">Tambah</button></div>
-  <div class="card"><h3>Netflix</h3><div class="price">Rp25.000</div><button onclick="addCart('Netflix')">Tambah</button></div>
-  <div class="card"><h3>Spotify</h3><div class="price">Rp25.000</div><button onclick="addCart('Spotify')">Tambah</button></div>
-  <div class="card"><h3>Apple Music</h3><div class="price">Rp25.000</div><button onclick="addCart('Apple Music')">Tambah</button></div>
-  <div class="card"><h3>Canva</h3><div class="price">Rp25.000</div><button onclick="addCart('Canva')">Tambah</button></div>
-  <div class="card"><h3>ChatGPT</h3><div class="price">Rp25.000</div><button onclick="addCart('ChatGPT')">Tambah</button></div>
-  <div class="card"><h3>Google One</h3><div class="price">Rp25.000</div><button onclick="addCart('Google One')">Tambah</button></div>
-  <div class="card"><h3>CapCut</h3><div class="price">Rp25.000</div><button onclick="addCart('CapCut')">Tambah</button></div>
-  <div class="card"><h3>Zoom</h3><div class="price">Rp25.000</div><button onclick="addCart('Zoom')">Tambah</button></div>
-  <div class="card"><h3>Microsoft 365</h3><div class="price">Rp25.000</div><button onclick="addCart('Microsoft 365')">Tambah</button></div>
-</div>
+<h2>Produk Populer</h2>
+<div class="grid" id="productList"></div>
 </section>
 
-<!-- RATING (SUDAH PINDAH KE SINI) -->
-<section class="section" id="rating">
+<section class="section">
 <h2>Apa Kata Mereka?</h2>
-<div class="rating">
-  <div class="card"><div class="stars">⭐⭐⭐⭐⭐</div><p>Admin cepat & ramah</p><small>Rina – Makassar</small></div>
-  <div class="card"><div class="stars">⭐⭐⭐⭐⭐</div><p>Spotify family aman</p><small>Dedi – Bandung</small></div>
-  <div class="card"><div class="stars">⭐⭐⭐⭐⭐</div><p>Canva Pro kepake</p><small>Akbar – Jakarta</small></div>
-  <div class="card"><div class="stars">⭐⭐⭐⭐⭐</div><p>ChatGPT lancar</p><small>Mijan – Surabaya</small></div>
+<div class="testi">
+  <div class="testi-card">⭐⭐⭐⭐⭐ Spotify aman<br><small>Rina – Makassar</small></div>
+  <div class="testi-card">⭐⭐⭐⭐⭐ Admin fast<br><small>Dedi – Bandung</small></div>
+  <div class="testi-card">⭐⭐⭐⭐⭐ Canva kepake<br><small>Akbar – Jakarta</small></div>
+  <div class="testi-card">⭐⭐⭐⭐⭐ Murah<br><small>Mijan – Surabaya</small></div>
 </div>
 </section>
 
-<!-- FAQ -->
 <section class="section" id="faq">
-<h2>FAQ</h2>
-<p>Pembayaran via Transfer • QRIS • Virtual Account</p>
+<h2>Pembayaran</h2>
+<p>BCA · Aladin · QRIS · ShopeePay · GoPay · Virtual Account</p>
 </section>
 
-<!-- FOOTER -->
 <footer>
-<p>ZEA UNIVERSE<br>WhatsApp 0812-9340-3706</p>
+  <p>© 2026 ZEA UNIVERSE</p>
 </footer>
 
-<!-- CART DRAWER -->
-<div id="cartDrawer">
-<h3>Keranjang</h3>
-<ul id="cartList"></ul>
-<button onclick="checkoutWA()">Checkout WhatsApp</button>
-<button onclick="openQris()">Bayar QRIS</button>
+<!-- CART -->
+<div class="cart-drawer" id="cartDrawer">
+  <button class="cart-back" onclick="closeCart()">← Kembali</button>
+  <h3>Keranjang</h3>
+  <ul class="cart-list" id="cartList"></ul>
+  <a class="btn-wa" id="waCheckout">Checkout WhatsApp</a>
+  <button class="btn-main" onclick="openQris()">Bayar QRIS</button>
 </div>
 
-<!-- QRIS MODAL -->
-<div id="qrisModal">
-  <div class="card">
+<!-- QRIS -->
+<div class="modal" id="qrisModal">
+  <div class="modal-box">
     <h3>QRIS Payment</h3>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=ZEA-UNIVERSE">
-    <br><br>
+    <p>Scan QR untuk bayar</p>
     <button onclick="closeQris()">Tutup</button>
   </div>
 </div>
 
-<!-- CHAT -->
-<div class="chat-bubble" onclick="checkoutWA()">💬</div>
+<div class="chat">💬</div>
 
 <script>
+const products=[
+"YouTube","Netflix","Spotify","Apple Music","Canva",
+"ChatGPT","Google One","CapCut","Zoom","Microsoft 365"
+];
+
 let cart=[];
+
+const list=document.getElementById("productList");
+products.forEach(p=>{
+  list.innerHTML+=`
+  <div class="card">
+    <h3>${p}</h3>
+    <div class="price">Rp 25.000</div>
+    <button onclick="addCart('${p}')">Tambah</button>
+  </div>`;
+});
+
 function addCart(p){
   cart.push(p);
-  document.getElementById("cartCount").innerText=cart.length;
   renderCart();
 }
+
 function renderCart(){
-  let ul=document.getElementById("cartList");
+  document.getElementById("cartCount").innerText=cart.length;
+  const ul=document.getElementById("cartList");
   ul.innerHTML="";
-  cart.forEach(i=>{
-    let li=document.createElement("li");
-    li.innerText=i;
-    ul.appendChild(li);
+  cart.forEach((i,idx)=>{
+    ul.innerHTML+=`
+    <li>${i}<span class="remove" onclick="removeItem(${idx})">✕</span></li>`;
   });
+  const text=encodeURIComponent("Order:\n"+cart.join("\n"));
+  document.getElementById("waCheckout").href="https://wa.me/6281293403706?text="+text;
 }
-function openCart(){
-  document.getElementById("cartDrawer").style.right="0";
-}
-function checkoutWA(){
-  let text="Halo Admin, saya mau order:%0A"+cart.join("%0A");
-  window.open("https://wa.me/6281293403706?text="+text);
-}
-function openQris(){
-  document.getElementById("qrisModal").style.display="flex";
-}
-function closeQris(){
-  document.getElementById("qrisModal").style.display="none";
-}
-function toggleTheme(){
-  document.body.classList.toggle("light");
-}
+
+function removeItem(i){cart.splice(i,1);renderCart()}
+function openCart(){document.getElementById("cartDrawer").classList.add("open")}
+function closeCart(){document.getElementById("cartDrawer").classList.remove("open")}
+function openQris(){document.getElementById("qrisModal").classList.add("open")}
+function closeQris(){document.getElementById("qrisModal").classList.remove("open")}
+function toggleTheme(){document.body.classList.toggle("light")}
 </script>
 
 </body>
-</html>
+</html>.
