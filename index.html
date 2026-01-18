@@ -193,17 +193,28 @@ footer{border-top:1px solid #1e293b;padding:40px 20px}
   border-radius:20px;
   font-size:12px;
   margin:12px 0;
+  
+/* ===== PRODUCT LOGO ===== */
+.product-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
-.welcome-box p{font-size:14px;line-height:1.6;margin-bottom:20px}
-.welcome-btn{
-  width:100%;
-  padding:12px;
-  border:none;
-  border-radius:12px;
-  background:#0f172a;
-  color:#fff;
-  font-weight:700;
-  cursor:pointer;
+
+.product-title img{
+  width:22px;
+  height:22px;
+  transition:.3s;
+}
+
+/* DARK MODE → putih */
+body:not(.light) .product-title img{
+  filter:invert(1) brightness(1.2);
+}
+
+/* LIGHT MODE → warna asli */
+body.light .product-title img{
+  filter:none;
 }
 
 /* ===== MOBILE ===== */
@@ -233,7 +244,7 @@ footer{border-top:1px solid #1e293b;padding:40px 20px}
 
 <header>
   <div class="nav">
-    <div class="brand"><span>ZEA°UNIVERSE</span></div>
+    <div class="brand"><span>ZEAUNIVERSE</span></div>
     <nav class="menu">
       <a href="#">Home</a>
       <a href="#produk">Produk</a>
@@ -315,39 +326,109 @@ footer{border-top:1px solid #1e293b;padding:40px 20px}
     <button onclick="closeQris()">Tutup</button>
   </div>
 </div>
+<div class="grid">
 
-<div class="chat">💬</div>
+  <!-- YouTube -->
+  <div class="card">
+    <h3 class="product-title">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg">
+      YouTube Premium
+    </h3>
+    <div class="price">Rp 25.000</div>
+    <button onclick="addCart('YouTube Premium')">Tambah</button>
+  </div>
 
-<script>
-const products=["YouTube","Netflix","Spotify","Apple Music","Canva","ChatGPT","Google One","CapCut","Zoom","Microsoft 365"];
-let cart=[];
-const list=document.getElementById("productList");
-products.forEach(p=>{
-  list.innerHTML+=`<div class="card"><h3>${p}</h3><div class="price">Rp 25.000</div><button onclick="addCart('${p}')">Tambah</button></div>`;
-});
-function addCart(p){cart.push(p);renderCart()}
-function renderCart(){
-  document.getElementById("cartCount").innerText=cart.length;
-  const ul=document.getElementById("cartList");ul.innerHTML="";
-  cart.forEach((i,idx)=>ul.innerHTML+=`<li>${i}<span class="remove" onclick="removeItem(${idx})">✕</span></li>`);
-  document.getElementById("waCheckout").href="https://wa.me/6281293403706?text="+encodeURIComponent("Order:\n"+cart.join("\n"));
-}
-function removeItem(i){cart.splice(i,1);renderCart()}
-function openCart(){cartDrawer.classList.add("open")}
-function closeCart(){cartDrawer.classList.remove("open")}
-function openQris(){qrisModal.classList.add("open")}
-function closeQris(){qrisModal.classList.remove("open")}
-function toggleTheme(){document.body.classList.toggle("light")}
-document.addEventListener("DOMContentLoaded",()=>{
-  if(!localStorage.getItem("welcomeSeen")){
-    welcomeModal.style.display="flex";
-  }
-});
-function closeWelcome(){
-  localStorage.setItem("welcomeSeen","yes");
-  welcomeModal.style.display="none";
-}
-</script>
+  <!-- Netflix -->
+  <div class="card">
+    <h3 class="product-title">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/netflix.svg">
+      Netflix
+    </h3>
+    <div class="price">Rp 25.000</div>
+    <button onclick="addCart('Netflix')">Tambah</button>
+  </div>
+
+  <!-- Spotify -->
+  <div class="card">
+    <h3 class="product-title">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg">
+      Spotify
+    </h3>
+    <div class="price">Rp 25.000</div>
+    <button onclick="addCart('Spotify')">Tambah</button>
+  </div>
+
+  <!-- Apple Music -->
+  <div class="card">
+    <h3 class="product-title">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/applemusic.svg">
+      Apple Music
+    </h3>
+    <div class="price">Rp 25.000</div>
+    <button onclick="addCart('Apple Music')">Tambah</button>
+  </div>
+
+  <!-- Canva -->
+  <div class="card">
+    <h3 class="product-title">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/canva.svg">
+      Canva Pro
+    </h3>
+    <div class="price">Rp 25.000</div>
+    <button onclick="addCart('Canva Pro')">Tambah</button>
+  </div>
+
+  <!-- ChatGPT -->
+  <div class="card">
+    <h3 class="product-title">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg">
+      ChatGPT Plus
+    </h3>
+    <div class="price">Rp 25.000</div>
+    <button onclick="addCart('ChatGPT Plus')">Tambah</button>
+  </div>
+
+  <!-- Google One -->
+  <div class="card">
+    <h3 class="product-title">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleone.svg">
+      Google One
+    </h3>
+    <div class="price">Rp 25.000</div>
+    <button onclick="addCart('Google One')">Tambah</button>
+  </div>
+
+  <!-- CapCut -->
+  <div class="card">
+    <h3 class="product-title">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/capcut.svg">
+      CapCut Pro
+    </h3>
+    <div class="price">Rp 25.000</div>
+    <button onclick="addCart('CapCut Pro')">Tambah</button>
+  </div>
+
+  <!-- Zoom -->
+  <div class="card">
+    <h3 class="product-title">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/zoom.svg">
+      Zoom Pro
+    </h3>
+    <div class="price">Rp 25.000</div>
+    <button onclick="addCart('Zoom Pro')">Tambah</button>
+  </div>
+
+  <!-- Microsoft -->
+  <div class="card">
+    <h3 class="product-title">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoft.svg">
+      Microsoft 365
+    </h3>
+    <div class="price">Rp 25.000</div>
+    <button onclick="addCart('Microsoft 365')">Tambah</button>
+  </div>
+
+</div>
 
 </body>
   </html>
